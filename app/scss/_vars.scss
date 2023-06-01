@@ -1,0 +1,54 @@
+
+// $default: #1B3764;
+// $hover: #4d7ecc;
+// $accent: #FFCA42;
+// $text-color: #B4C7E7;
+// $textwhite: #F6F8FC;
+// $textgray: #969AA0;
+
+// %btn {
+//    @extend %cardo-400;
+//    background-color: $accent;
+//    font-size: 19px;
+//    line-height: 28px;
+//    letter-spacing: 0.57px;
+//    text-transform: capitalize;
+//    color: $default;
+//    border: none;
+//    cursor: pointer;
+//    transition: all .2s;
+
+//    &:hover {
+//       color: $accent;
+//       background-color: $hover;
+//    }
+// }
+
+
+
+
+
+%Inter-400 {
+   font-family: 'Inter-Regular', sans-serif;
+   font-weight: 400;
+}
+%faktum-500 {
+   font-family: 'faktum-medium', sans-serif;
+   font-weight: 500;
+}
+%faktum-wide-400 {
+   font-family: 'faktum-wide-regular', sans-serif;
+   font-weight: 400;
+}
+%faktum-wide-500 {
+   font-family: 'faktum-wide-medium', sans-serif;
+   font-weight: 500;
+}
+%faktum-wide-700 {
+   font-family: 'faktum-wide-bold', sans-serif;
+   font-weight: 700;
+}
+%faktum-wide-800 {
+   font-family: 'faktum-wide-extrabold', sans-serif;
+   font-weight: 800;
+}

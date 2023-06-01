@@ -1,0 +1,54 @@
+@font-face {
+   font-family: 'Inter-Regular';
+   font-weight: 400;
+   font-style: normal;
+   src: local('Inter-Regular'),
+   url('../fonts/Inter-Regular.woff2') format('woff2'),
+   url('../fonts/Inter-Regular.woff') format('woff');
+   font-display: swap;      
+}
+@font-face {
+   font-family: 'faktum-medium';
+   font-weight: 500;
+   font-style: normal;
+   src: local('faktum-medium'),
+   url('../fonts/faktum-medium.woff2') format('woff2'),
+   url('../fonts/faktum-medium.woff') format('woff');
+   font-display: swap;      
+}
+@font-face {
+   font-family: 'faktum-wide-regular';
+   font-weight: 400;
+   font-style: normal;
+   src: local('faktum-wide-regular'),
+   url('../fonts/faktum-wide-regular.woff2') format('woff2'),
+   url('../fonts/faktum-wide-regular.woff') format('woff');
+   font-display: swap;      
+}
+@font-face {
+   font-family: 'faktum-wide-medium';
+   font-weight: 500;
+   font-style: normal;
+   src: local('faktum-wide-medium'),
+   url('../fonts/faktum-wide-medium.woff2') format('woff2'),
+   url('../fonts/faktum-wide-medium.woff') format('woff');
+   font-display: swap;      
+}
+@font-face {
+   font-family: 'faktum-wide-bold';
+   font-weight: 700;
+   font-style: normal;
+   src: local('faktum-wide-bold'),
+   url('../fonts/faktum-wide-bold.woff2') format('woff2'),
+   url('../fonts/faktum-wide-bold.woff') format('woff');
+   font-display: swap;      
+}
+@font-face {
+   font-family: 'faktum-wide-extrabold';
+   font-weight: 800;
+   font-style: normal;
+   src: local('faktum-wide-extrabold'),
+   url('../fonts/faktum-wide-extrabold.woff2') format('woff2'),
+   url('../fonts/faktum-wide-extrabold.woff') format('woff');
+   font-display: swap;      
+}
