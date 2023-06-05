@@ -2,4 +2,18 @@ body {
    min-height: 100vh;
    @extend %faktum-wide-500;
 }
+a{
+   text-decoration: none;
+}
+// svg path {
+//    stroke:inherit;
+//    stroke-width:inherit;
+//    fill:inherit;
+// }
+.container{
+   width: 1470px;
+   margin: 0 auto;
+   padding: 0 15px;
+   background-color: $default;
+}
 /* =============================*/

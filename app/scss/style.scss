@@ -3,9 +3,113 @@
 @import 'reset';
 @import 'global';
 
-main{
-   font-size: 50px;
+.header-top{
+   @extend %faktum-wide-700;
+   font-size: 12px;
+   line-height: 16px;
+   color: $default;
+   background-color: $accented;
+   max-width: 1470px;
+   height: 44px;
+   margin: 0 -15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 5px;
 }
+.menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 80px;
+   &__left{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 60px;
+   }
+   &__left-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+	&__left-item + .menu__left-item{
+      margin-left: 45px;
+   }
+	&__link {
+      @extend %faktum-wide-700;
+      font-size: 14px;
+      line-height: 20px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__right{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+	&__right-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__right-item + .menu__right-item{
+      margin-left: 32px;
+   }
+   &__btn{
+      margin-left: 40px;
+      margin-right: 45px;
+      background-color: $accented;
+      color: $default;
+      @extend %faktum-500;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 162px;
+      height: 42px;
+      padding: 12px 27px 12px 23px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+         background-color: $hover;
+      }
+      svg{
+         width: 13px;
+         height: 12px;
+      }
+   }
+}
+.logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   &__svg{
+      width: 49px;
+      height: 48px;
+   }
+   &__img{
+      path{
+         fill: $accented
+      }
+   }
+}
+
+
+
+
+
+
+
+
 
 
 
