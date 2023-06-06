@@ -6,6 +6,7 @@ body {
    height: 100vh;
    @extend %faktum-wide-500;
    color: $accented;
+   background-color: $default;
 }
 .wrapper{   
    min-height: 100%;

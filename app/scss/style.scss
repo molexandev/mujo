@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -158,6 +159,103 @@
    }
 }
 
+//   =======   TOP-SLIDER   =======
+.top-slider {
+   &__item {
+      position: relative;
+      min-height: 818px;
+   }
+   &__content {
+      padding-left: 170px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 120px;
+      line-height: 100px;
+      text-transform: uppercase;
+      max-width: 753px;
+      margin-bottom: 56px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 500px;
+      margin-bottom: 59px;
+   }
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: center;
+      max-width: 362px;
+   }
+   &__link {
+      font-size: 14px;
+      line-height: 18px;
+      @extend %faktum-wide-400;
+      color: $accented;
+      border-bottom: 1px solid #999;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__btn {
+      width: 176px;
+      height: 56px;
+      padding: 19px 27px 19px 23px;
+      border: 1px solid #C6C6BD;
+      background-color: transparent;
+      @extend %faktum-500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: left;
+      cursor: pointer;
+      transition: all .2s;
+      position: relative;
+      &:hover{
+         background-color: $hover;
+      }
+   }
+   &__btn-svg {
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      top: 19px;
+      right: 27px;
+
+   }
+   &__img {
+      position: absolute;
+      left: 581px;
+      top: 142px;
+      z-index: 5;
+   }
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-bottom: 160px;
+      li{
+         button{
+            background-color: $accent-gray;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 0;
+         }
+         &.slick-active{
+            button{
+               background-color: #D8D7CA;
+               border: 1px solid $accent-gray;
+            }
+         }
+      }
+   }
+}
 
 
 
