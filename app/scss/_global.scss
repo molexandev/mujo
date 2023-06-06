@@ -1,16 +1,23 @@
+html,
 body {
-   min-height: 100vh;
+   height: 100%;
+}
+body {
+   height: 100vh;
    @extend %faktum-wide-500;
    color: $accented;
+}
+.wrapper{   
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.main {
+   flex-grow: 1;
 }
 a{
    text-decoration: none;
 }
-// svg path {
-//    stroke:inherit;
-//    stroke-width:inherit;
-//    fill:inherit;
-// }
 .container{
    width: 1470px;
    margin: 0 auto;

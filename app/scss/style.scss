@@ -3,7 +3,13 @@
 @import 'reset';
 @import 'global';
 
-
+.header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+}
 .header-top{
    @extend %faktum-wide-700;
    font-size: 12px;
@@ -19,12 +25,12 @@
    margin-bottom: 5px;
 }
 .menu {
-   padding-bottom: 95px;
-   padding-top: 16px;
+   padding: 16px 0;
    display: flex;
    justify-content: space-between;
    align-items: center;
    min-height: 80px;
+   border-bottom: 1px solid #C6C6BD;
    &__left{
       display: flex;
       justify-content: space-between;
@@ -109,6 +115,7 @@
 //  =======   TOP   =======
 .top {
    &__wrapper{
+      margin-top: 132px;
       padding: 95px 60px 24px;
       background-color: $default;
    }
@@ -150,6 +157,12 @@
       height: 172px;
    }
 }
+
+
+
+
+
+
 
 
 
@@ -238,7 +251,7 @@
    &__input-mail[placeholder]{
       font-size: 14px;
       line-height: 18px;
-      color: #999993;
+      color: $accent-gray;
    }
 	&__btn {
       width: 13px;
@@ -272,6 +285,7 @@
    }
 }
 .footer-logo {
+   padding: 64px 60px 56px;
 	&__svg {
       width: 1320px;
       height: 272px;
@@ -279,22 +293,51 @@
 }
 .footer-bottom {
 	&__inner-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 55px 60px 40px;
 	}
 	&__text-info {
+      font-size: 16px;
+      line-height: 20px;
 	}
 	&__title {
+      font-size: 20px;
+      line-height: 20px;
+      @extend %faktum-wide-700;
+      text-transform: uppercase;
 	}
 	&__link-block {
+      display: flex;
+      justify-content: space-between;
+      gap: 38px;
 	}
 	&__link {
+      font-size: 16px;
+      line-height: 32px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
 	}
 	&__inner-bottom {
+      text-align: center;
 	}
 	&__text-top {
+      border: 1px solid $accent-gray;
+      display: inline-block;
+      margin-bottom: 17px;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 8px;
 	}
 	&__text-bottom {
+      font-size: 12px;
+      line-height: 16px;
+      @extend %faktum-wide-700;
+      padding: 0 60px 40px;
+      color: $accent-gray;
 	}
 }
-
-
 @import 'media';
