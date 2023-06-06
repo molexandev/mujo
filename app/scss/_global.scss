@@ -1,6 +1,7 @@
 body {
    min-height: 100vh;
    @extend %faktum-wide-500;
+   color: $accented;
 }
 a{
    text-decoration: none;

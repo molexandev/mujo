@@ -3,6 +3,7 @@
 @import 'reset';
 @import 'global';
 
+
 .header-top{
    @extend %faktum-wide-700;
    font-size: 12px;
@@ -18,10 +19,12 @@
    margin-bottom: 5px;
 }
 .menu {
+   padding-bottom: 95px;
+   padding-top: 16px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 80px;
+   min-height: 80px;
    &__left{
       display: flex;
       justify-content: space-between;
@@ -103,6 +106,50 @@
    }
 }
 
+//  =======   TOP   =======
+.top {
+   &__wrapper{
+      padding: 95px 60px 24px;
+      background-color: $default;
+   }
+   &__logo {
+      margin-bottom: 169px;
+   }
+   &__info {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      gap: 222px;
+      @extend %faktum-wide-800;
+      text-transform: uppercase;
+   }
+   &__title {
+      font-size: 32px;
+      line-height: 28px;
+      width: 323px;
+      height: 56px;
+      margin-bottom: 5px;
+   }
+   &__subtitle {
+      font-size: 16px;
+      line-height: 20px;
+      width: 300px;
+      height: 40px;
+   }
+   &__img-box{
+      padding-bottom: 175px;
+   }
+   &__img {
+      margin: 0 auto;
+      object-fit: contain;
+      width: 1402px;
+      height: 720px;
+   }
+   &__logo-big {
+      width: 798px;
+      height: 172px;
+   }
+}
 
 
 
@@ -124,6 +171,130 @@
 
 
 
+//   =======   FOOTER   =======
+.footer-top {
+	&__inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 70px;
+      padding: 80px 60px 64px;
+	}
+	&__item {
+      min-width: 170px;
+	}
+	&__item-title {
+      @extend %faktum-wide-800;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $accented;
+      margin-bottom: 30px;
+	}
+   &__link-wrapper{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 12px;
+   }
+   &__instagram-svg{
+      width: 24px;
+      height: 24px;
+   }
+	&__link {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 18px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+	}
+	&__link-instagramm {
+      @extend %faktum-500;
+      font-size: 14px;
+      line-height: 32px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+	}
+	&__nav-item {
+      margin-bottom: 15px;
+   }
+	&__form-top {
+      margin-bottom: 11px;
+      position: relative;
+	}
+	&__input-mail {
+      width: 317px;
+      height: 46px;
+      background-color: transparent;
+      border: 1px solid #C6C6BD;
+      outline: none;
+      padding: 14px 20px;
+	}
+   &__input-mail[placeholder]{
+      font-size: 14px;
+      line-height: 18px;
+      color: #999993;
+   }
+	&__btn {
+      width: 13px;
+      height: 13px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 14px;
+      right: 20px;
+	}
+   &__btn-svg{
+      width: 13px;
+      height: 13px;
+   }
+   &__label{
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      max-width: 317px;
+   }
+	&__input-checkbox {
+      margin: 0;
+	}
+   &__input-text{
+      padding-left: 12px;
+      @extend %faktum-wide-700;
+      color: #969690;
+      font-size: 12px;
+      line-height: 16px;
+   }
+}
+.footer-logo {
+	&__svg {
+      width: 1320px;
+      height: 272px;
+	}
+}
+.footer-bottom {
+	&__inner-top {
+	}
+	&__text-info {
+	}
+	&__title {
+	}
+	&__link-block {
+	}
+	&__link {
+	}
+	&__inner-bottom {
+	}
+	&__text-top {
+	}
+	&__text-bottom {
+	}
+}
 
 
 @import 'media';
