@@ -36,20 +36,13 @@ $accent-gray: #999993;
 // $textwhite: #F6F8FC;
 // $textgray: #969AA0;
 
-// %btn {
-//    @extend %cardo-400;
-//    background-color: $accent;
-//    font-size: 19px;
-//    line-height: 28px;
-//    letter-spacing: 0.57px;
-//    text-transform: capitalize;
-//    color: $default;
-//    border: none;
-//    cursor: pointer;
-//    transition: all .2s;
-
-//    &:hover {
-//       color: $accent;
-//       background-color: $hover;
-//    }
-// }
+%btn {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   padding: 19px 27px 19px 23px;
+   transition: all .2s;
+   &:hover {
+      background-color: $hover;
+   }
+}
