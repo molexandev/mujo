@@ -1,4 +1,5 @@
 $(function () {
+    
     // fadeIn
 
     (function () {
@@ -16,6 +17,12 @@ $(function () {
         var fadeInOneScTitle = document.querySelector(".one-scoop__info-title");
         var fadeInOneScText = document.querySelector(".one-scoop__text");
         var fadeInOneScBtn = document.querySelector(".one-scoop__btn");
+        var fadeInHappyCust = document.querySelector(".happy-customers__title");
+        var fadeInHappyInner = document.querySelector(".happy-customers__inner");
+        var fadeInownChoiceTitle = document.querySelector(".own-choice__title");
+        var fadeInownChoiceText = document.querySelector(".own-choice__text");
+        var fadeInownChoiceBtn = document.querySelector(".own-choice__btn");
+        
 
         var observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -47,12 +54,17 @@ $(function () {
         observer.observe(fadeInOneScTitle);
         observer.observe(fadeInOneScText);
         observer.observe(fadeInOneScBtn);
+        observer.observe(fadeInHappyCust);
+        observer.observe(fadeInHappyInner);
+        observer.observe(fadeInownChoiceTitle);
+        observer.observe(fadeInownChoiceText);
+        observer.observe(fadeInownChoiceBtn);
     })();
 
     // fadeInRLeft
 
     (function () {
-        var oneScoopTitle = document.querySelector(".one-scoop__title-top");        
+        var oneScoopTitle = document.querySelector(".one-scoop__title-top");   
 
         var observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -65,6 +77,7 @@ $(function () {
 
                 if (entry.isIntersecting) {
                     entry.target.classList.add("animate__fadeInLeft");
+                    entry.target.classList.add("animate__animated");
                 }
             });
         });
@@ -88,6 +101,7 @@ $(function () {
 
                 if (entry.isIntersecting) {
                     entry.target.classList.add("animate__fadeInRight");
+                    entry.target.classList.add("animate__animated");
                 }
             });
         });
