@@ -591,7 +591,7 @@
       min-width: 1390px;
    }
    &__inner {
-      padding-top: 196px;
+      padding-top: 64px;
    }
    &__inner-top {
       max-width: 1040px;
@@ -782,6 +782,143 @@
       line-height: 20px;
    }
 }
+
+//   =======   ABOUT   =======
+
+//   =======   TOP-ABOUT   =======
+.top-about {
+   &__inner {
+      padding-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 64px;
+   }
+   &__logo {
+      margin-left: 60px;
+   }
+   &__box-text {
+      margin-right: 308px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      max-width: 405px;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__text {
+      @extend %faktum-wide-500;
+      max-width: 370px;
+      font-size: 18px;
+      line-height: 22px;
+   }
+   &__img-box {
+      margin-bottom: 120px;
+   }
+   &__img {
+      margin: 0 auto;
+   }
+}
+
+//   =======   ABOUT-INFO   =======
+.about-info {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 128px;
+      margin-bottom: 120px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      max-width: 429px;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 387px;
+   }
+}
+
+//   =======   COFFEE-MADE   =======
+.coffee-made {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 169px;
+      margin-bottom: 160px;
+      padding-left: 171px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 388px;
+      margin-bottom: 24px;
+      animation-delay: 1s;
+      animation-duration: 1.5s;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      max-width: 388px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 40px;
+      animation-delay: 1.5s;
+      animation-duration: 1.5s;
+   }
+   &__btn {
+      @extend %faktum-wide-500;
+      @extend %btn;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 199px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      animation-delay: 2s;
+      animation-duration: 1.5s;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+   }
+   &__img {
+      width: 712px;
+      height: 540px;
+      object-fit: cover;
+   }
+   &__fadein_left{
+      animation-delay: .3s;
+      animation-duration: 1s;
+   }
+   &__fadein_right{
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
