@@ -444,7 +444,6 @@
       color: $default;
       width: 176px;
       height: 56px;
-      // text-align: left;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -749,6 +748,7 @@
       font-size: 32px;
       line-height: 28px;
       text-transform: uppercase;
+      margin: 0 auto;
       margin-bottom: 80px;
       max-width: 850px;
    }
@@ -897,7 +897,7 @@
       object-fit: cover;
    }
    &__fadein_left{
-      animation-delay: .3s;
+      animation-delay: .5s;
       animation-duration: 1s;
    }
    &__fadein_right{
@@ -905,6 +905,88 @@
       animation-duration: 1s;
    }
 }
+
+//   =======   COFFEE-MADE   =======
+
+.existing-coffee{
+   &__inner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 127px;
+      margin-bottom: 160px;
+   }
+   &__img {
+      object-fit: cover;
+      width: 652px;
+      height: 540px;
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
+   &__info {
+      max-width: 400px;
+   }
+   &__info-title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      animation-delay: 1s;
+      animation-duration: 1s;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 387px;
+      margin-bottom: 40px;
+      animation-delay: 1.3s;
+      animation-duration: 1s;
+   }
+   &__btn {
+      @extend %btn;
+      background-color: $default;
+      color: $accented;
+      border: 1px solid $accented;
+      width: 176px;
+      height: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation-delay: 1.7s;
+      animation-duration: 1s;
+   }
+   &__svg {
+      width: 13px;
+      height: 13px;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
