@@ -22,6 +22,7 @@ $(function () {
         var fadeInownChoiceTitle = document.querySelector(".own-choice__title");
         var fadeInownChoiceText = document.querySelector(".own-choice__text");
         var fadeInownChoiceBtn = document.querySelector(".own-choice__btn");
+        var fadeInTopWhymujo = document.querySelector(".top-whymujo__inner");
         
 
         var observer = new IntersectionObserver((entries) => {
@@ -59,6 +60,7 @@ $(function () {
         observer.observe(fadeInownChoiceTitle);
         observer.observe(fadeInownChoiceText);
         observer.observe(fadeInownChoiceBtn);
+        observer.observe(fadeInTopWhymujo);
     })();
 
     // fadeInRLeft
