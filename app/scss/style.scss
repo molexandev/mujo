@@ -568,6 +568,14 @@
       height: 540px;
       object-fit: cover;
    }
+   &__fadein_left{
+      animation-delay: .3s;
+      animation-duration: 1s;
+   }
+   &__fadein_right{
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
 }
 
 
@@ -655,6 +663,8 @@
       text-transform: uppercase;
       margin-bottom: 64px;
       max-width: 429px;
+      animation-delay: .5s;
+      animation-duration: 1s;
    }
    &__preferences {
       max-width: 429px;
@@ -664,6 +674,8 @@
       align-items: start;
       column-gap: 40px;
       row-gap: 32px;
+      animation-delay: 1s;
+      animation-duration: 1s;
    }
    &__preferences-item {
       width: 110px;
@@ -686,6 +698,8 @@
       justify-content: center;
       column-gap: 130px;
       margin-bottom: 120px;
+      animation-delay: 1.5s;
+      animation-duration: 1s;
 	}
 	&__info-title {
       @extend %faktum-wide-800;
@@ -701,9 +715,28 @@
       max-width: 428px;
 	}
 }
-
+//   ======= ENERGY   =======
+.energy{
+   &__title{
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
+   &__text{
+      animation-delay: .7s;
+      animation-duration: 1s;
+   }
+   &__btn{
+      animation-delay: .9s;
+      animation-duration: 1s;
+   }
+   &__img{
+      animation-delay: 1.2s;
+      animation-duration: 1s;
+   }
+}
 //   =======   ADAPTOGENS   =======
 .adaptogens {
+   animation-duration: 1s;
    &__wrapper {
       background-color: #787C63;
       color: $default;
