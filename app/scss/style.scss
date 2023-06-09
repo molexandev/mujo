@@ -631,6 +631,127 @@
 	}
 }
 
+//   =======   STRESS   =======
+.stress {
+   &__inner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 120px;
+      column-gap: 238px;
+   }
+   &__img-box {
+      margin-left: 72px;
+   }
+   &__img {
+      width: 541px;
+      height: 540px;
+   }
+   &__title {
+      text-align-last: left;
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 64px;
+      max-width: 429px;
+   }
+   &__preferences {
+      max-width: 429px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: start;
+      column-gap: 40px;
+      row-gap: 32px;
+   }
+   &__preferences-item {
+      width: 110px;
+   }
+   &__svg {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+   }
+	&__info {
+      display: flex;
+      justify-content: center;
+      column-gap: 130px;
+      margin-bottom: 120px;
+	}
+	&__info-title {
+      @extend %faktum-wide-800;
+      max-width: 428px;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+	}
+	&__info-text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 428px;
+	}
+}
+
+//   =======   ADAPTOGENS   =======
+.adaptogens {
+   &__wrapper {
+      background-color: #787C63;
+      color: $default;
+      text-align: center;
+      padding: 120px 236px;
+      margin-bottom: 120px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 80px;
+      max-width: 850px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 8px;
+   }
+   &__item {
+      width: 317px;
+   }
+   &__svg {
+      display: block;
+      margin: 0 auto;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-700;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__text {
+      margin: 0 auto;
+      @extend %faktum-wide-400;
+      max-width: 260px;
+      font-size: 15px;
+      line-height: 20px;
+   }
+}
+
+
+
 
 
 
