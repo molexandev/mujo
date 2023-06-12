@@ -50,6 +50,7 @@
       @extend %faktum-wide-700;
       font-size: 14px;
       line-height: 20px;
+      text-transform: uppercase;
       color: $accented;
       transition: all .2s;
       &:hover{
@@ -1029,10 +1030,6 @@
       width: 541px;
       height: 211px;
    }
-   &__img {
-   }
-   &__info {
-   }
    &__subtitle {
       @extend %faktum-wide-800;
       max-width: 196px;
@@ -1062,7 +1059,7 @@
    }
 }
 
-//   =======   FOOTER   =======
+//   =======   JOURNAL-ONE   =======
 .journal-one-top {
    &__wrapper{
       padding: 64px 171px 0;
@@ -1139,14 +1136,105 @@
       margin: 0 auto;
       margin-bottom: 64px;
    }
-   // &__items {
-   // }
    &__item {
       display: list-item;
       list-style: disc;
       margin-left: 25px;
    }
 }
+
+//   =======   SHOP   =======
+.shop {
+   &__wrapper {
+      padding: 80px 60px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 64px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 15px;
+      row-gap: 78.95px;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 429px;
+   }
+   &__item:hover{
+      .shop__btn{
+         transform: translateY(-100px);
+      }
+      .shop__img-box{
+         background-color: #D7D7C8;
+      }
+   }
+   &__img-box {
+      width: 429px;
+      height: 429px;
+      position: relative;
+      overflow: hidden;
+      transition: all .2s;
+      margin-bottom: 24px;
+      background: #F9F8ED;
+   }
+   &__img {
+      width: 366px;
+      height: 362px;
+      margin: 0 auto;
+      margin-bottom: 34px;
+      margin-top: 34px;
+   }
+   &__btn {
+      width: 400px;
+      height: 56px;
+      padding: 18px 20px;
+      text-align: center;
+      color: $default;
+      background-color: $accented;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+         background-color: $hover;
+      }
+      margin: 0 auto;
+      display: block;
+      transform: translateY(100px);
+      transition: all .2s;
+   }
+   &__item-title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+   }
+   &__description {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 16px;
+   }
+   &__price-box {
+      @extend %faktum-wide-500;
+      display: flex;
+      justify-content: space-between;
+      width: 236px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #999;
+   }
+}
+
+
+
+
+
 
 
 
