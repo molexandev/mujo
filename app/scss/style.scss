@@ -1041,6 +1041,13 @@
       text-transform: uppercase;
       margin-bottom: 16px;
    }
+   &__title-link{
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover
+      }
+   }
    &__link {
       @extend %faktum-wide-400;
       color: $accented;
@@ -1055,9 +1062,91 @@
    }
 }
 
-
-
-
+//   =======   FOOTER   =======
+.journal-one-top {
+   &__wrapper{
+      padding: 64px 171px 0;
+      margin-bottom: 120px;
+   }
+   &__category {
+      @extend %faktum-500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 32px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      max-width: 800px;
+      margin-bottom: 48px;
+   }
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+   }
+   &__info-item {
+      display: flex;
+      column-gap: 8px;
+   }
+   &__info-title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__info-text {
+      @extend %Inter-400;
+      font-size: 14px;
+      line-height: 16px;
+   }
+   &__img {
+      width: 1098px;
+      height: 488px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+   }
+}
+.journal-one-bottom {
+   &__wrapper-bottom{
+      padding: 0 263px;
+      margin-bottom: 120px;
+   }
+   &__heade-text {
+      @extend %faktum-wide-400;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 64px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 64px;
+   }
+   &__img {
+      width: 861.52px;
+      height: 488px;
+      margin: 0 auto;
+      margin-bottom: 64px;
+   }
+   // &__items {
+   // }
+   &__item {
+      display: list-item;
+      list-style: disc;
+      margin-left: 25px;
+   }
+}
 
 
 
