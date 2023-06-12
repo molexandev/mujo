@@ -63,6 +63,7 @@ function scripts() {
       'node_modules/rateyo/src/jquery.rateyo.js',
       'app/js/whymujo.js',
       'app/js/about.js',
+      'app/js/product.js',
       'app/js/main.js'
    ])
    .pipe(concat('main.min.js'))
