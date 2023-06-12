@@ -920,11 +920,13 @@
       object-fit: cover;
       width: 652px;
       height: 540px;
-      animation-delay: .5s;
+      animation-delay: .1s;
       animation-duration: 1s;
    }
    &__info {
       max-width: 400px;
+      animation-delay: .1s;
+      animation-duration: 1s;
    }
    &__info-title {
       @extend %faktum-wide-800;
@@ -963,8 +965,95 @@
    }
 }
 
+//   =======   JOURNAL   =======
 
-
+.journal {
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 120px;
+      line-height: 100px;
+      text-transform: uppercase;
+      margin-left: 170px;
+      padding-top: 160px;
+      margin-bottom: 92px;
+   }
+   &__inner {
+      padding: 0 170px 80px;
+   }
+}
+.journal-top {
+   margin-bottom: 80px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 49px;
+   &__img {
+      width: 541px;
+      height: 550px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 24px;
+   }
+   &__btn {
+      @extend %btn;
+      width: 194px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+   }
+}
+.journal-bottom {
+   display: flex;
+   justify-content: space-between;
+   column-gap: 16px;
+   row-gap: 24px;
+   flex-wrap: wrap;
+   &__item {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 24px;
+      width: 541px;
+      height: 211px;
+   }
+   &__img {
+   }
+   &__info {
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      max-width: 196px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__link {
+      @extend %faktum-wide-400;
+      color: $accented;
+      font-size: 14px;
+      line-height: 18px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+}
 
 
 

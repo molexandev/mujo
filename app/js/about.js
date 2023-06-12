@@ -4,6 +4,7 @@ $(function () {
 
    (function () {
        var topAbout = document.querySelector(".top-about");
+       var adaptogens = document.querySelector(".adaptogens");
        
 
        var observer = new IntersectionObserver((entries) => {
@@ -24,12 +25,15 @@ $(function () {
 
 
        observer.observe(topAbout);
+       observer.observe(adaptogens);
    })();
 
        // fadeInRLeft
 
        (function () {
         var coffeMadeFadLeft = document.querySelector(".coffee-made__fadein_left");
+        var existingCoffeeImg = document.querySelector(".existing-coffee__img");
+        var ownChoiceItem = document.querySelector(".own-choice__item");
 
         var observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -49,12 +53,16 @@ $(function () {
 
 
         observer.observe(coffeMadeFadLeft);
+        observer.observe(existingCoffeeImg);
+        observer.observe(ownChoiceItem);
     })();
 
     // fadeInRight
 
     (function () {
         var coffeMadeFadRight = document.querySelector(".coffee-made__fadein_right");
+        var existingCoffeeInfo = document.querySelector(".existing-coffee__info");
+        var ownChoiceImg = document.querySelector(".own-choice__img");
 
         var observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -73,6 +81,8 @@ $(function () {
         });
 
         observer.observe(coffeMadeFadRight);
+        observer.observe(existingCoffeeInfo);
+        observer.observe(ownChoiceImg);
     })();
    
 });
