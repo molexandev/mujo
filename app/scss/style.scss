@@ -1232,54 +1232,133 @@
 }
 
 //   =======   PRODUCT   =======
+//   =======   product top   =======
 .product-top {
    &__wrapper {
       padding: 64px 171px 120px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-   }
-   &__slider {
-   }
-   &__content {
+      column-gap: 126px;
    }
    &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 16px;
    }
    &__subtitle {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 32px;
    }
    &__description {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      margin-bottom: 40px;
    }
    &__form {
+      margin-bottom: 16px;
    }
    &__form-title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
    }
-   &__label {
-   }
+
    &__input {
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      position: absolute;
+      &:checked{
+         & + .product-top__select-wrapper
+         {
+            border: 2px solid #787C63;
+         } 
+      }
    }
-   &__select {
+   &__select-wrapper {
+      width: 430px;
+      transition: all .2s;
+      height: 76px;
+      border: 1px solid #C6C6BD;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      cursor: pointer;
+
    }
    &__select-top {
-   }
-   &__select-subscribtion {
-   }
-   &__select-price {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 12px 4px;
+      @extend %faktum-wide-700;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
    }
    &__select-bottom {
-   }
-   &__select-serving {
-   }
-   &__select-price-serving {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 12px 16px;
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999993;
+
    }
    &__shiping {
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      margin-bottom: 40px;
+   }
+   &__shiping-svg{
+      width: 9px;
+      height: 7px;
+      margin-right: 8px;
    }
    &__btn {
+      background-color: $accented;
+      color: $default;
+      width: 316px;
+      height: 56px;
+      @extend %faktum-wide-700;
+      font-size: 14px;
+      line-height: 20px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+         background-color: $hover;
+      }
    }
    &__info {
+      width: 316px;
+      margin: 0 auto;
    }
    &__info-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 8px 7px 0;
    }
    &__info-link {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #999993;
    }
    &__svg {
       width: 14px;
@@ -1303,27 +1382,370 @@
    }
    &__thumb {
       max-width: 653px;
-      .slick-slide{
-
-      }
       .slick-track{
-
+         display: flex;
+         justify-content: start;
       }
-   }
-   &__thumb-item {
-      // width: 207px!important;
-      // height: 164px!important;
-      // border-radius: 5px;
-      // background-color: #F9F8EE;
-      // padding: 0 16px;
-      margin-right: 50px;
+      .slick-list{
+         padding: 0!important;
+      }
    }
    &__thumb-img {
       width: 207px;
       height: 164px;
       object-fit: cover;
    }
+   &__img-wrapper{
+      max-width: 207px;
+      height: 164px;
+      margin-right: 16px;
+      background-color: #F9F8EE;      
+   }
+   &__img-wrapper--last{
+      margin-right: 0;
+   }
 }
+//   =======   product-top END   =======
+.product-benefits {
+   animation-duration: 1s;
+   &__wrapper {
+      background-color: #787C63;
+      color: $default;
+      text-align: center;
+      padding: 120px 60px;
+      margin-bottom: 120px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin: 0 auto;
+      margin-bottom: 80px;
+      max-width: 850px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 8px;
+   }
+   &__item {
+      width: 317px;
+   }
+   &__svg {
+      display: block;
+      margin: 0 auto;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-700;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__text {
+      margin: 0 auto;
+      @extend %faktum-wide-400;
+      max-width: 260px;
+      font-size: 15px;
+      line-height: 20px;
+   }
+}
+//   =======   PREMIUM   =======
+.premium {
+   &__title-box {
+      @extend %faktum-wide-800;
+      font-size: 85px;
+      line-height: 125px;
+      text-transform: uppercase;
+   }
+   &__title-bottom {
+      color: $default;
+      -webkit-text-stroke: 1px $accented;
+      margin-bottom: 120px;
+   }
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 58px;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      row-gap: 24px;
+      margin-bottom: 120px;
+   }
+   &__item {
+      width: 207px;
+      height: 187px;
+      text-align: center;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+   &__img-box{
+      flex-grow: 1;
+   }
+   &__img {
+      margin: 0 auto;
+      margin-bottom: 11px;
+   }
+   &__item-title {
+      @extend %faktum-wide-800;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__text {
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999993;
+   }
+   &__btn{
+      @extend %btn;
+      width: 311px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 18px;
+      @extend %faktum-wide-500;
+      margin-bottom: 80px;
+   }
+   &__svg{
+      width: 13px;
+      height: 12px;
+   }
+}
+
+//   =======   SOURCED   =======
+.sourced {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 127px;
+      margin-bottom: 120px;
+   }
+   &__info {     
+      width: 430px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 366px;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+   }
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 64px;
+      background-color: #F9F8ED;
+      padding: 72px 72px 72px 80px;
+   }
+   &__content-item {
+      width: 248px;
+   }
+   &__content-img {
+      width: 248px;
+      height: 248px;
+      margin-bottom: 40px;
+   }
+   &__content-deskr {
+      @extend %faktum-wide-500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 4px;
+   }
+   &__content-subtitle {
+      @extend %faktum-wide-800;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__content-info-item {
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #333;
+      margin-bottom: 4px;
+   }
+}
+
+//   =======   FAQ   =======
+.faq {
+   &__inner {
+      margin-bottom: 120px;
+      background-color: #787C63;
+      padding: 120px 170px;
+      display: flex;
+      justify-content: space-between;
+      color: $default;
+   }
+   &__info {
+      margin-right: 128px;
+      width: 429px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__descr {
+      @extend %faktum-wide-500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 32px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+      width: 319px;
+      margin-bottom: 40px;
+   }
+   &__btn {
+      width: 196px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      @extend %btn;
+      font-size: 14px;
+      line-height: 18px;
+      @extend %faktum-wide-500;
+      color: $default;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__svg {
+      margin-top: 3px;
+      width: 13px;
+      height: 12px;
+   }
+}
+.faq-content {
+   width: 650px;
+   &__box {
+      padding-bottom: 32px;
+      border-bottom: 1px solid #C6C6BD;
+      margin-bottom: 32px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      cursor: pointer;
+   }
+   &__title--active{
+      .faq-content__svg--plus{
+         display: none;
+      }
+      .faq-content__svg--minus{
+         display: block;
+      }
+   }
+   &__title-span{
+      display: block;
+      cursor: pointer;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+      display: none;
+   }
+   &__text--active{
+      display: block;    
+   }
+   &__svg--minus {
+      width: 16px;
+      height: 16px;
+      padding-top: 6px;
+      display: none;
+   }
+   &__svg--plus {
+      width: 16px;
+      height: 16px;
+      display: block;
+   }
+}
+
+//   =======   ideas   =======
+.ideas {
+   &__title{
+      @extend %faktum-wide-800;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      width: 392px;
+      margin-left: 60px;
+      margin-bottom: 64px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 60px;
+      margin-bottom: 120px;
+   }
+   &__item {
+      width: 429px;
+   }
+   &__img {
+      width: 429px;
+      height: 400px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__list {
+      max-width: 289px;
+   }
+   &__list-item {
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: start;
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+   }
+   &__quantity {
+      color: #333;
+      width: 88px;
+      opacity: 0.5;
+   }
+}
+
+
+
+
+
+
+
+
 
 
 
