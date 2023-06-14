@@ -1739,7 +1739,95 @@
    }
 }
 
+//   =======   CONTACT   
+.contact {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 120px 171px 0 178px;
+      margin-bottom: 120px;
+   }
+   &__info {
+      width: 549px;
+      margin-right: 114px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      width: 430px;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      width: 392px;
+   }
+   &__content-top {
+      margin-bottom: 32px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+   }
+   &__link {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+      transition: all .2s;
+      color: #333;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__form {
+      width: 438px;
+      margin-bottom: 40px;
+   }
+   &__input,
+   &__textarea {
+      width: 438px;
+      height: 56px;
+      padding: 19px 12px 19px 24px;
+      background-color: #F9F8ED;
+      border: 1px solid #C6C6BD;
+      margin-bottom: 16px;
+      &:focus-visible{
+         outline: 2px solid #787c63;
+      }
+      &[placeholder]{
+         @extend %faktum-wide-500;
+         font-size: 14px;
+         line-height: 18px;
+         color: $accent-gray;
+      }
+   }
+   &__textarea {
+      height: 160px;
+      resize: none;
 
+   }
+   &__btn {
+      @extend %btn;
+      width: 220px;
+      height: 56px;
+      background-color: $accented;
+      color: $default;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+      margin-top: 3px;
+   }
+}
 
 
 
