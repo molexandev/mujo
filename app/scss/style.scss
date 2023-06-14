@@ -32,13 +32,11 @@
    align-items: center;
    min-height: 80px;
    border-bottom: 1px solid #C6C6BD;
-   &__left{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-left: 60px;
+   &__left-btn{
+      display: none;
    }
    &__left-info {
+      padding-left: 45px!important;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -120,6 +118,9 @@
       animation-delay: .5s;
       animation-duration: 2s;
    }
+   &__logo-small{
+      display: none;
+   }
    &__info {
       display: flex;
       justify-content: end;
@@ -164,6 +165,10 @@
 
 //   =======   TOP-SLIDER   =======
 .top-slider {
+   &__inner{
+      width: 100%;
+      margin: 0 auto;
+   }
    &__item {
       position: relative;
       min-height: 818px;
@@ -1213,6 +1218,13 @@
       line-height: 20px;
       text-transform: uppercase;
       margin-bottom: 8px;
+   }
+   &__item-title-link{
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
    }
    &__description {
       @extend %faktum-wide-500;

@@ -8,28 +8,25 @@
    <title>Document</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
    <div class="wrapper">
       <header class="header">
          <div class="container">
             <div class="header-top">Free shipping on orders over 60 $</div>
             <nav class="menu">
-               <div class="menu__left">
-                  <ul class="menu__left-info">
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="whymujo.html">Why Mujo</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="about.html">About</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="journal.html">Journal</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="shop.html">Shop</a>
-                     </li>
-                  </ul>
-               </div>
+               <ul class="menu__left-info">
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="whymujo.html">Why Mujo</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="about.html">About</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="journal.html">Journal</a>
+                  </li>
+               </ul>
+               <button class="menu__left-btn"><span></span></button>
                <a class="logo" href="index.html">
                   <svg class="logo__svg">
                      <use xlink:href="../images/sprite.svg#logo-img" width="49" height="48"></use>
@@ -38,22 +35,23 @@
                <div class="menu__right">
                   <ul class="menu__right-nav">
                      <li class="menu__right-item">
-                        <a class="menu__link" href="#">Log in</a>
+                        <a class="menu__link" href="shop.html">Shop</a>
                      </li>
                      <li class="menu__right-item">
                         <a class="menu__link" href="contact.html">Contact</a>
                      </li>
                   </ul>
-                  <button class="menu__btn" type="submit">Shop now
-                     <svg>
-                        <use xlink:href="../images/sprite.svg#arrow-right" width="13" height="12"></use>
-                     </svg>
-                  </button>
+                  <form action="shop.html">
+                     <button class="menu__btn" type="submit">Shop now
+                        <svg>
+                           <use xlink:href="../images/sprite.svg#arrow-right" width="13" height="12"></use>
+                        </svg>
+                     </button>
+                  </form>
                </div>
             </nav>
          </div>
       </header>
-   
 <main class="main">
    <section class="journal">
       <div class="container">
@@ -119,6 +117,7 @@
       </div>
    </section>
 </main>
+<!--
 <footer class="footer">
    <div class="container">
       <div class="footer-top">
@@ -217,6 +216,7 @@
       </div>
    </div>
 </footer>
+-->
 <script src="js/main.min.js"></script>
 </body>
 </html>

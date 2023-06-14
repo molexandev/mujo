@@ -1,5 +1,12 @@
 $(function () {
 
+    // MENU
+
+    $(".menu__left-btn, .menu a").on("click", function () {
+        $(".menu__left-info").toggleClass("menu__left-info--active");
+        $("body").toggleClass("lock");
+    });
+
     // SLIDER
 
     $(".top-slider__inner").slick({

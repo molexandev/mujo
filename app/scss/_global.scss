@@ -8,6 +8,9 @@ body {
    color: $accented;
    background-color: $default;
 }
+.lock{
+   overflow: hidden;
+}
 .wrapper{   
    min-height: 100%;
    display: flex;

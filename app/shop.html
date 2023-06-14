@@ -8,28 +8,25 @@
    <title>Document</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
    <div class="wrapper">
       <header class="header">
          <div class="container">
             <div class="header-top">Free shipping on orders over 60 $</div>
             <nav class="menu">
-               <div class="menu__left">
-                  <ul class="menu__left-info">
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="whymujo.html">Why Mujo</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="about.html">About</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="journal.html">Journal</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="shop.html">Shop</a>
-                     </li>
-                  </ul>
-               </div>
+               <ul class="menu__left-info">
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="whymujo.html">Why Mujo</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="about.html">About</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="journal.html">Journal</a>
+                  </li>
+               </ul>
+               <button class="menu__left-btn"><span></span></button>
                <a class="logo" href="index.html">
                   <svg class="logo__svg">
                      <use xlink:href="../images/sprite.svg#logo-img" width="49" height="48"></use>
@@ -38,22 +35,23 @@
                <div class="menu__right">
                   <ul class="menu__right-nav">
                      <li class="menu__right-item">
-                        <a class="menu__link" href="#">Log in</a>
+                        <a class="menu__link" href="shop.html">Shop</a>
                      </li>
                      <li class="menu__right-item">
                         <a class="menu__link" href="contact.html">Contact</a>
                      </li>
                   </ul>
-                  <button class="menu__btn" type="submit">Shop now
-                     <svg>
-                        <use xlink:href="../images/sprite.svg#arrow-right" width="13" height="12"></use>
-                     </svg>
-                  </button>
+                  <form action="shop.html">
+                     <button class="menu__btn" type="submit">Shop now
+                        <svg>
+                           <use xlink:href="../images/sprite.svg#arrow-right" width="13" height="12"></use>
+                        </svg>
+                     </button>
+                  </form>
                </div>
             </nav>
          </div>
       </header>
-   
 <main class="main">
    <section class="shop">
       <div class="container">
@@ -67,7 +65,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Vitality brew</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Vitality brew</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -85,7 +85,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Milk Frother</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Milk Frother</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -103,7 +105,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Beauty brew</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Beauty brew</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -121,7 +125,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Balance brew</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Balance brew</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -139,7 +145,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Milk Frother</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Milk Frother</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -157,7 +165,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Milk Frother</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Milk Frother</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -175,7 +185,9 @@
                      </a>
                      <a class="shop__btn" href="product.html">View product</a>
                   </div>
-                  <h5 class="shop__item-title">Milk Frother</h5>
+                  <h5 class="shop__item-title">
+                     <a class="shop__item-title-link" href="product.html">Milk Frother</a>
+                  </h5>
                   <div class="shop__description">Functional coffee alternative</div>
                   <div class="shop__price-box">
                      <div class="shop__price-name">Monthly subscription</div>
@@ -191,6 +203,7 @@
       </div>
    </section>
 </main>
+<!--
 <footer class="footer">
    <div class="container">
       <div class="footer-top">
@@ -289,6 +302,7 @@
       </div>
    </div>
 </footer>
+-->
 <script src="js/main.min.js"></script>
 </body>
 </html>
