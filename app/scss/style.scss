@@ -1841,101 +1841,6 @@
    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //   =======   FOOTER   =======
 .footer{
    .container{
@@ -1959,6 +1864,7 @@
       text-transform: uppercase;
       color: $accented;
       margin-bottom: 30px;
+      pointer-events: none;
 	}
    &__link-wrapper{
       display: flex;
@@ -2016,7 +1922,7 @@
       @extend %btn;
       position: absolute;
       top: 14px;
-      right: 20px;
+      left: 287px;
       padding: 0;
 	}
    &__btn-svg{
@@ -2046,6 +1952,9 @@
       width: 1320px;
       height: 272px;
 	}
+   &__svg-small{
+      display: none;
+   }
 }
 .footer-bottom {
 	&__inner-top {

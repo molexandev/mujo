@@ -7,6 +7,13 @@ $(function () {
         $("body").toggleClass("lock");
     });
 
+    // FOOTER SLIDE
+
+    $(".footer-top__item-title--slider").on("click", function () {
+        $(this).toggleClass("footer-top__nav--active");
+        $(this).next().slideToggle();
+    });
+
     // SLIDER
 
     $(".top-slider__inner").slick({
