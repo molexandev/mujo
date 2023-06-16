@@ -43,6 +43,21 @@
          margin-bottom: 60px;
       }
    }
+   .product-top{
+      &__wrapper{
+         column-gap: 30px;
+         padding-left: 30px;
+         padding-right: 30px;
+      }
+   }
+   .ideas{
+      &__inner{
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: 30px;
+         column-gap: 30px;
+      }
+   }
 }
 @media (max-width: 1350px){
    .top-slider{
@@ -201,15 +216,98 @@
          padding: 30px 15px;
       }
       &__item{
-         width: 329px;
+         width: 100%;
       }
       &__img-box{
-         width: 329px;
+         width: 100%;
       }
       &__inner{
          display: grid;
-         grid-template-columns: repeat(3, 1fr);
+         grid-template-columns: repeat(2, 1fr);
          row-gap: 30px;
+      }
+   }
+   .product-top{
+      &__wrapper{
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: 30px;
+      }
+      &__content{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+      &__description{
+         width: 80%;
+      }
+   }
+   .slider-product{
+      &__big{
+         width: 100%;
+         height: auto;
+         margin-bottom: 30px;
+      }
+      &__thumb{
+         margin: 0 auto;
+         margin-bottom: 30px;
+      }
+   }
+   .premium{
+      &__title-box{
+         font-size: 55px;
+         line-height: 85px;
+      }
+   }
+   .sourced{
+      &__inner{
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: 30px;
+         column-gap: 0;
+      }
+      &__info{
+         width: 90%;
+         text-align: center;
+      }
+      &__title{
+         max-width: 100%;
+      }
+      &__content{
+         padding: 15px;
+         column-gap: 30px;
+      }
+      &__content-item{
+         width: 100%;
+      }
+   }
+   .faq{
+      &__inner{
+         padding: 60px 30px;
+         margin-bottom: 60px;
+      }
+      &__info{
+         margin-right: 0;
+      }
+   }
+   .contact{
+      &__inner{
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: 30px;
+         padding: 60px 30px;
+      }
+      &__info{
+         margin-right: 0;
+         width: 100%;
+         text-align: center;
+      }
+      &__title{
+         width: 100%;
+      }
+      &__text{
+         width: 100%;
       }
    }
 }
@@ -223,6 +321,15 @@
       }
       &__img-box{
          width: 100%;
+      }
+   }
+   .ideas{
+      &__item{
+         width: 350px;
+      }
+      &__img{
+         width: auto;
+         height: auto;
       }
    }
 }
@@ -379,6 +486,80 @@
       }
       &__price-box{
          margin: 0 auto;
+      }
+   }
+   .slider-product{
+      &__big{
+         width: 100%;
+         height: auto;
+         margin: 0 auto;
+         margin-bottom: 30px;
+         img{
+            margin: 0 auto;
+         }
+      }
+      &__thumb{
+         width: 100%;
+         margin: 0 auto;
+         margin-bottom: 30px;
+      }
+   }
+   .product-benefits{
+      &__wrapper{
+         padding: 60px 15px;
+      }
+      &__title{
+         margin-bottom: 50px;
+         font-size: 22px;
+      }
+      &__inner{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+   .premium{
+      &__title-box{
+         font-size: 55px;
+         line-height: 85px;
+         text-align: center;
+      }
+      &__title-bottom{
+         margin-bottom: 30px;
+      }
+      &__items{
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+   .faq{
+      &__inner{
+         padding: 30px 15px;
+         margin-bottom: 50px;
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: 60px;
+      }
+      &__info{
+         margin-right: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         text-align: center;
+      }
+   }
+   .ideas{
+      &__inner{
+         padding: 0 15px;  
+      }
+      &__item{
+         width: 286px;
+      }
+      &__title{
+         width: 100%;
+         font-size: 32px;
+         margin-left: 0;
+         text-align: center;
       }
    }
 }
@@ -609,6 +790,72 @@
          height: auto;
       }
    }
+   .product-top{
+      &__wrapper{
+         row-gap: 0;
+         padding: 30px 0;
+      }
+   }
+   .slider-product{
+      &__big{
+         width: 100%;
+         height: auto;
+         margin-bottom: 30px;
+      }
+      &__thumb{
+         display: none;
+      }
+   }
+   .product-benefits{
+      &__wrapper{
+         padding: 30px 15px;
+      }
+      &__title{
+         margin-bottom: 30px;
+      }
+      &__inner{
+         grid-template-columns: repeat(1, 1fr);
+         justify-items: center;
+         row-gap: 30px;
+      }
+   }
+   .premium{
+      &__title-box{
+         font-size: 35px;
+         line-height: 55px;
+      }
+      &__items{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         justify-items: center;
+         padding: 0 15px;
+      }
+   }
+   .contact{
+      &__inner{
+         padding: 30px 15px;
+      }
+      &__title{
+         width: 100%;
+         font-size: 32px;
+      }
+      &__text{
+         width: 100%;
+      }
+      &__content-top{
+         text-align: center;
+      }
+      &__content{
+         width: 100%;
+      }
+      &__form{
+         margin: 0 auto;
+      }
+      &__btn{
+         margin: 0 auto;
+      }
+
+   }
 }
 @media (max-width: 550px){
    .menu{
@@ -784,6 +1031,79 @@
          display: flex;
       }
    }
+   .product-top{
+      &__title{
+         font-size: 22px;
+      }
+      &__description{
+         width: 290px;
+      }
+      &__select-wrapper{
+         width: 290px;
+      }
+      &__btn{
+         width: 290px;
+      }
+      &__info{
+         width: 290px;
+      }
+   }
+   .premium{
+      &__title-box{
+         font-size: 22px;
+         line-height: 30px;
+      }
+      &__items{
+         grid-template-columns: repeat(1, 1fr);
+      }
+      &__btn{
+         width: 270px;
+      }
+   }
+   .sourced{
+      &__inner{
+         row-gap: 20px;
+      }
+      &__info{
+         width: 100%;
+         text-align: center;
+      }
+      &__title{
+         font-size: 22px;
+         line-height: 30px;
+         max-width: 100%;
+      }
+      &__content{
+         flex-wrap: wrap;
+         row-gap: 20px;
+      }
+      &__content-item{
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+   }
+   .faq{
+      &__text{
+         width: 270px;
+      }
+   }
+   .contact{
+      &__form{
+         width: 280px;
+      }
+      &__input{
+         width: 280px;
+      }
+      &__textarea{
+         width: 280px;
+      }
+      &__btn{
+         margin: 0 auto;
+      }
+   }
 }
 @media (max-width: 446px){
    .benefits-bottom{
@@ -800,6 +1120,11 @@
       }
       &__text-bottom{
          padding: 15px;
+      }
+   }
+   .product-benefits{
+      &__item{
+         width: 290px;
       }
    }
 }

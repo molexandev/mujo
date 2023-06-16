@@ -22,6 +22,9 @@ $(function () {
         speed: 2000,
         autoplay: true,
         autoplaySpeed: 2000,
+        // draggable: true,
+        // variableWidth: true,
+        // vertical: false
     });
 
     // RATING
