@@ -8,25 +8,25 @@
    <title>Document</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
    <div class="wrapper">
       <header class="header">
          <div class="container">
             <div class="header-top">Free shipping on orders over 60 $</div>
             <nav class="menu">
-               <div class="menu__left">
-                  <ul class="menu__left-info">
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="whymujo.html">Why Mujo</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="#">About</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="#">Journal</a>
-                     </li>
-                  </ul>
-               </div>
+               <ul class="menu__left-info">
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="whymujo.html">Why Mujo</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="about.html">About</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="journal.html">Journal</a>
+                  </li>
+               </ul>
+               <button class="menu__left-btn"><span></span></button>
                <a class="logo" href="index.html">
                   <svg class="logo__svg">
                      <use xlink:href="images/sprite.svg#logo-img" width="49" height="48"></use>
@@ -35,23 +35,24 @@
                <div class="menu__right">
                   <ul class="menu__right-nav">
                      <li class="menu__right-item">
-                        <a class="menu__link" href="#">Log in</a>
+                        <a class="menu__link" href="shop.html">Shop</a>
                      </li>
                      <li class="menu__right-item">
-                        <a class="menu__link" href="#">Cart</a>
+                        <a class="menu__link" href="contact.html">Contact</a>
                      </li>
                   </ul>
-                  <button class="menu__btn" type="submit">Shop now
-                     <svg>
-                        <use xlink:href="images/sprite.svg#arrow-right" width="13" height="12"></use>
-                     </svg>
-                  </button>
+                  <form action="shop.html">
+                     <button class="menu__btn" type="submit">Shop now
+                        <svg>
+                           <use xlink:href="images/sprite.svg#arrow-right" width="13" height="12"></use>
+                        </svg>
+                     </button>
+                  </form>
                </div>
             </nav>
          </div>
       </header>
-   
-<main class="main">
+<main class="main">   
    <section class="top-whymujo">
       <div class="container">
          <div class="top-whymujo__inner">
@@ -78,31 +79,136 @@
    <section class="own-choice">
       <div class="container">
          <div class="one-scoop__title-box">
-            <div class="rateYo"></div>
             <h2 class="one-scoop__title-top top-whymujo__title-top">brew a change</h2>
-            <h2 class="one-scoop__title-bottom">from within</h2>
+            <h2 class="one-scoop__title-bottom top-whymujo__title-right">from within</h2>
          </div>
          <div class="own-choice__inner">
             <div class="own-choice__item">
-               <h3 class="own-choice__title">ENERGY AND STRESS CONNECTION</h3>
-               <p class="own-choice__text">Your cells sense stress through a mechanism called the mitochondria, which
+               <h3 class="own-choice__title energy__title">ENERGY AND STRESS CONNECTION</h3>
+               <p class="own-choice__text energy__text">Your cells sense stress through a mechanism called the mitochondria, which
                   also produces molecules that store your energy (ATP, adenosine triphosphate). Exposure to stress can
                   switch energy production off, making you feel tired and unproductive. </p>
-               <button class="own-choice__btn" type="submit">Learn more
+               <button class="own-choice__btn energy__btn" type="submit">Learn more
                   <svg class="own-choice__svg">
                      <use xlink:href="images/sprite.svg#arrow-right-footer" width="13" height="12"></use>
                   </svg>
                </button>
             </div>
             <div class="own-choice__item">
-               <img class="own-choice__img" src="images/brew-change-img.jpg" alt="own choice image">
+               <img class="own-choice__img energy__img" src="images/brew-change-img.jpg" alt="own choice image">
+            </div>
+         </div>
+      </div>
+   </section> 
+   <section class="stress">
+      <div class="container">
+         <div class="stress__inner">
+            <div class="stress__item">
+               <div class="stress__img-box">
+                  <img class="stress__img" src="images/stress-img-1.jpg" alt="stress image">
+               </div>
+            </div>
+            <div class="stress__item">
+               <h3 class="stress__title">Stress comes in many forms</h3>
+               <div class="stress__preferences">
+                  <div class="stress__preferences-item">
+                     <svg class="stress__svg">
+                        <use xlink:href="images/sprite.svg#stress-img" width="32" height="32"></use>
+                     </svg>
+                     <p class="stress__text">Environmental toxins</p>
+                  </div>
+                  <div class="stress__preferences-item">
+                     <svg class="stress__svg">
+                        <use xlink:href="images/sprite.svg#stress-img" width="32" height="32"></use>
+                     </svg>
+                     <p class="stress__text">Psychological</p>
+                  </div>
+                  <div class="stress__preferences-item">
+                     <svg class="stress__svg">
+                        <use xlink:href="images/sprite.svg#stress-img" width="32" height="32"></use>
+                     </svg>
+                     <p class="stress__text">Poor diet</p>
+                  </div>
+                  <div class="stress__preferences-item">
+                     <svg class="stress__svg">
+                        <use xlink:href="images/sprite.svg#stress-img" width="32" height="32"></use>
+                     </svg>
+                     <p class="stress__text">Poor health /Illness</p>
+                  </div>
+                  <div class="stress__preferences-item">
+                     <svg class="stress__svg">
+                        <use xlink:href="images/sprite.svg#stress-img" width="32" height="32"></use>
+                     </svg>
+                     <p class="stress__text">Poor gut health </p>
+                  </div>
+                  <div class="stress__preferences-item">
+                     <svg class="stress__svg">
+                        <use xlink:href="images/sprite.svg#stress-img" width="32" height="32"></use>
+                     </svg>
+                     <p class="stress__text">Chronic inflammation</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="stress__info">
+            <h3 class="stress__info-title">support your stress response from within</h3>
+            <p class="stress__info-text">Mujo’s ingredients help your mitochondria become more resilient to stress so your ATP energy production isn’t switched off as easily, even when you have a lot on your plate.</p>
+         </div>
+      </div>
+   </section>
+   <section class="adaptogens">
+      <div class="container">
+         <div class="adaptogens__wrapper">
+            <h3 class="adaptogens__title">The adaptogens in mujo work to 
+               increase the  resilience of the 
+               mitochondria</h3>
+            <div class="adaptogens__inner">
+               <div class="adaptogens__item">
+                  <svg class="adaptogens__svg">
+                     <use xlink:href="images/sprite.svg#benefits-1" width="32" height="32"></use>
+                  </svg>
+                  <h5 class="adaptogens__subtitle">Stimulate biogenesis</h5>
+                  <p class="adaptogens__text">help create new mitochondria by feeding the membranes with relevant co-factors</p>
+               </div>
+               <div class="adaptogens__item">
+                  <svg class="adaptogens__svg">
+                     <use xlink:href="images/sprite.svg#benefits-1" width="32" height="32"></use>
+                  </svg>
+                  <h5 class="adaptogens__subtitle">Repair and protect</h5>
+                  <p class="adaptogens__text">build-up the mitochondria defense system and the protective barrier with antioxidants .</p>
+               </div>
+               <div class="adaptogens__item">
+                  <svg class="adaptogens__svg">
+                     <use xlink:href="images/sprite.svg#benefits-1" width="32" height="32"></use>
+                  </svg>
+                  <h5 class="adaptogens__subtitle">Increase capacity</h5>
+                  <p class="adaptogens__text">deliver compounds that lead to improved production of ATP molecules</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>          
+   <section class="own-choice">
+      <div class="container">
+         <div class="own-choice__inner">
+            <div class="own-choice__item own-choice__fadein_left">
+               <h3 class="own-choice__title">brain and gut connection</h3>
+               <p class="own-choice__text">Imbalance and inflammation in your gut can have a negative impact on how sharp you might feel. >70% of your immune system lives in your gut, so if you’re experiencing inflammation there, it’s likely your overall sense of well-being, focus, and productivity will also be affected.</p>
+               <button class="own-choice__btn" type="submit">Learn more
+                  <svg class="own-choice__svg">
+                     <use xlink:href="images/sprite.svg#arrow-right-footer" width="13" height="12"></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="own-choice__item own-choice__fadein_right">
+               <img class="own-choice__img" src="images/own-choice-img.jpg" alt="own choice image">
             </div>
          </div>
       </div>
    </section>
 </main>
 <footer class="footer">
-   <div class="container">
+   <div class="container">  
       <div class="footer-top">
          <div class="footer-top__inner">
             <div class="footer-top__item">
@@ -117,7 +223,7 @@
                </div>
             </div>
             <div class="footer-top__item">
-               <h5 class="footer-top__item-title">products</h5>
+               <h5 class="footer-top__item-title footer-top__item-title--slider">products</h5>
                <ul class="footer-top__nav">
                   <li class="footer-top__nav-item">
                      <a class="footer-top__link" href="#">Vital Force</a>
@@ -128,7 +234,7 @@
                </ul>
             </div>
             <div class="footer-top__item">
-               <h5 class="footer-top__item-title">Why mujo</h5>
+               <h5 class="footer-top__item-title footer-top__item-title--slider">Why mujo</h5>
                <ul class="footer-top__nav">
                   <li class="footer-top__nav-item">
                      <a class="footer-top__link" href="#">Ingredients</a>
@@ -142,7 +248,7 @@
                </ul>
             </div>
             <div class="footer-top__item">
-               <h5 class="footer-top__item-title">Company</h5>
+               <h5 class="footer-top__item-title footer-top__item-title--slider">Company</h5>
                <ul class="footer-top__nav">
                   <li class="footer-top__nav-item">
                      <a class="footer-top__link" href="#">About us</a>
@@ -181,6 +287,9 @@
       <div class="footer-logo">
          <svg class="footer-logo__svg">
             <use xlink:href="images/sprite.svg#logo-footer" width="1320px" height="272px"></use>
+         </svg>
+         <svg class="footer-logo__svg-small">
+            <use xlink:href="images/sprite.svg#logo-footer" width="244px" height="150px"></use>
          </svg>
       </div>
       <div class="footer-bottom">
