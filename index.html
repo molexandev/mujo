@@ -8,25 +8,25 @@
    <title>Document</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
    <div class="wrapper">
       <header class="header">
          <div class="container">
             <div class="header-top">Free shipping on orders over 60 $</div>
             <nav class="menu">
-               <div class="menu__left">
-                  <ul class="menu__left-info">
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="whymujo.html" target="_blank">Why Mujo</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="#">About</a>
-                     </li>
-                     <li class="menu__left-item">
-                        <a class="menu__link" href="#">Journal</a>
-                     </li>
-                  </ul>
-               </div>
+               <ul class="menu__left-info">
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="whymujo.html">Why Mujo</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="about.html">About</a>
+                  </li>
+                  <li class="menu__left-item">
+                     <a class="menu__link" href="journal.html">Journal</a>
+                  </li>
+               </ul>
+               <button class="menu__left-btn"><span></span></button>
                <a class="logo" href="index.html">
                   <svg class="logo__svg">
                      <use xlink:href="images/sprite.svg#logo-img" width="49" height="48"></use>
@@ -35,29 +35,33 @@
                <div class="menu__right">
                   <ul class="menu__right-nav">
                      <li class="menu__right-item">
-                        <a class="menu__link" href="#">Log in</a>
+                        <a class="menu__link" href="shop.html">Shop</a>
                      </li>
                      <li class="menu__right-item">
-                        <a class="menu__link" href="#">Cart</a>
+                        <a class="menu__link" href="contact.html">Contact</a>
                      </li>
                   </ul>
-                  <button class="menu__btn" type="submit">Shop now
-                     <svg>
-                        <use xlink:href="images/sprite.svg#arrow-right" width="13" height="12"></use>
-                     </svg>
-                  </button>
+                  <form action="shop.html">
+                     <button class="menu__btn" type="submit">Shop now
+                        <svg>
+                           <use xlink:href="images/sprite.svg#arrow-right" width="13" height="12"></use>
+                        </svg>
+                     </button>
+                  </form>
                </div>
             </nav>
          </div>
       </header>
-   
 <main class="main">
    <section class="top">
       <div class="container">
          <div class="top__wrapper">
             <div class="top__logo">
                <svg class="top__logo-big">
-                  <use xlink:href="images/sprite.svg#logo-big" width="798" height="172"></use>
+                  <use id="top__logo-big" xlink:href="images/sprite.svg#logo-big" width="798" height="172"></use>
+               </svg>
+               <svg class="top__logo-small">
+                  <use id="top__logo-big" xlink:href="images/sprite.svg#logo-big" width="275" height="172"></use>
                </svg>
             </div>
             <div class="top__info">
@@ -189,7 +193,7 @@
             </div>
          </div>
       </div>
-   </section>
+   </section>     
    <section class="one-scoop">
       <div class="container">
          <div class="one-scoop__title-box">
@@ -210,7 +214,7 @@
             </div>
          </div>
       </div>
-   </section>
+   </section>     
    <section class="happy-customers">
       <div class="container">
          <h4 class="happy-customers__title">our HAPPY CUSTOMERS</h4>
@@ -249,7 +253,7 @@
             </div>
          </div>
       </div>
-   </section>
+   </section>   
    <section class="own-choice">
       <div class="container">
          <div class="own-choice__inner">
@@ -270,7 +274,7 @@
    </section>
 </main>
 <footer class="footer">
-   <div class="container">
+   <div class="container">  
       <div class="footer-top">
          <div class="footer-top__inner">
             <div class="footer-top__item">
@@ -285,7 +289,7 @@
                </div>
             </div>
             <div class="footer-top__item">
-               <h5 class="footer-top__item-title">products</h5>
+               <h5 class="footer-top__item-title footer-top__item-title--slider">products</h5>
                <ul class="footer-top__nav">
                   <li class="footer-top__nav-item">
                      <a class="footer-top__link" href="#">Vital Force</a>
@@ -296,7 +300,7 @@
                </ul>
             </div>
             <div class="footer-top__item">
-               <h5 class="footer-top__item-title">Why mujo</h5>
+               <h5 class="footer-top__item-title footer-top__item-title--slider">Why mujo</h5>
                <ul class="footer-top__nav">
                   <li class="footer-top__nav-item">
                      <a class="footer-top__link" href="#">Ingredients</a>
@@ -310,7 +314,7 @@
                </ul>
             </div>
             <div class="footer-top__item">
-               <h5 class="footer-top__item-title">Company</h5>
+               <h5 class="footer-top__item-title footer-top__item-title--slider">Company</h5>
                <ul class="footer-top__nav">
                   <li class="footer-top__nav-item">
                      <a class="footer-top__link" href="#">About us</a>
@@ -349,6 +353,9 @@
       <div class="footer-logo">
          <svg class="footer-logo__svg">
             <use xlink:href="images/sprite.svg#logo-footer" width="1320px" height="272px"></use>
+         </svg>
+         <svg class="footer-logo__svg-small">
+            <use xlink:href="images/sprite.svg#logo-footer" width="244px" height="150px"></use>
          </svg>
       </div>
       <div class="footer-bottom">
