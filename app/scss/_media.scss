@@ -445,6 +445,11 @@
          flex-wrap: wrap;
          justify-content: center;
          row-gap: 30px;
+         margin-bottom: 100px;
+      }
+      &__img{
+         object-fit: contain;
+         height: auto;
       }
    }
    .existing-coffee{
@@ -564,6 +569,11 @@
    }
 }
 @media (max-width: 768px){
+   .header{
+      .container{
+         padding: 0;
+      }
+   }
    .menu{
       &__left-btn{
          display: block;
@@ -588,6 +598,7 @@
             width: 100%;
             height: 3px;
             background-color: $accented;
+            transition: all .2s;
          }
          &::before{
             top: 0;
@@ -601,8 +612,21 @@
             background-color: $accented;
          }
       }
+      &__left-btn--active{
+         &::before{
+            top: 9px;
+            transform: rotate(45deg);
+         }
+         &::after{
+            bottom: 8px;
+            transform: rotate(-45deg);
+         }
+         span{
+            display: none;
+         }
+      }
       &__left-info{
-         display: none;
+
          width: 100%;
          height: 138px;
          position: absolute;
@@ -623,11 +647,6 @@
       }
       &__left-info--active{
          transform: translateX(0%);
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-         align-items: center;
-         overflow: hidden;
       }
       &__left-item{
          margin: 7px 0;
@@ -760,6 +779,13 @@
       }
       &__text{
          width: 100%;
+      }
+   }
+   .journal{
+      &__title{
+         font-size: 72px;
+         line-height: 90px;
+         margin-bottom: 30px;
       }
    }
    .journal-one-top{
@@ -984,6 +1010,14 @@
          width: 100%;
       }
    }
+   .journal{
+      &__title{
+         font-size: 32px;
+         line-height: 45px;
+         margin-bottom: 30px;
+         padding-top: 30px;
+      }
+   }
    .journal-bottom{
       &__item{
          flex-wrap: wrap;
@@ -1090,15 +1124,20 @@
          width: 270px;
       }
    }
+   .faq-content{
+      &__title{
+         font-size: 14px;
+      }
+   }
    .contact{
       &__form{
-         width: 280px;
+         width: 261px;
       }
       &__input{
-         width: 280px;
+         width: 261px;
       }
       &__textarea{
-         width: 280px;
+         width: 261px;
       }
       &__btn{
          margin: 0 auto;

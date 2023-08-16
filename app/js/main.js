@@ -4,6 +4,7 @@ $(function () {
 
     $(".menu__left-btn, .menu a").on("click", function () {
         $(".menu__left-info").toggleClass("menu__left-info--active");
+        $(".menu__left-btn").toggleClass("menu__left-btn--active");
         $("body").toggleClass("lock");
     });
 
@@ -22,9 +23,6 @@ $(function () {
         speed: 2000,
         autoplay: true,
         autoplaySpeed: 2000,
-        // draggable: true,
-        // variableWidth: true,
-        // vertical: false
     });
 
     // RATING
