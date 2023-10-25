@@ -1935,17 +1935,16 @@
       justify-content: start;
       align-items: start;
       max-width: 317px;
-   }
-	&__input-checkbox {
-      margin: 0;
-	}
-   &__input-text{
-      padding-left: 12px;
       @extend %faktum-wide-700;
       color: #969690;
       font-size: 12px;
       line-height: 16px;
    }
+	&__input-checkbox {
+      margin: 0;
+      margin-right: 12px;
+	}
+
 }
 .footer-logo {
    padding: 64px 60px 56px;
