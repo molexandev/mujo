@@ -382,9 +382,6 @@
          object-fit: cover;
       }
    }
-   .top-slider{
-      display: none;
-   }
    .one-scoop{
       &__inner{
          flex-wrap: wrap;
@@ -674,6 +671,9 @@
       &__item-img{
          order: 4;
       }
+   }
+   .benefits-bottom{
+      margin-bottom: 50px;
    }
    .happy-customers{
       &__inner{
