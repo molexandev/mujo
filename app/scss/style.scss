@@ -4,14 +4,14 @@
 @import 'libs';
 @import 'global';
 
-.header{
+.header {
    position: fixed;
    top: 0;
    left: 0;
    right: 0;
    z-index: 1000;
 }
-.header-top{
+.header-top {
    @extend %faktum-wide-700;
    font-size: 12px;
    line-height: 16px;
@@ -31,44 +31,44 @@
    justify-content: space-between;
    align-items: center;
    min-height: 80px;
-   border-bottom: 1px solid #C6C6BD;
-   &__left-btn{
+   border-bottom: 1px solid #c6c6bd;
+   &__left-btn {
       display: none;
    }
    &__left-info {
-      padding-left: 45px!important;
+      padding-left: 45px !important;
       display: flex;
       justify-content: space-between;
       align-items: center;
    }
-	&__left-item + .menu__left-item{
+   &__left-item + .menu__left-item {
       margin-left: 45px;
    }
-	&__link {
+   &__link {
       @extend %faktum-wide-700;
       font-size: 14px;
       line-height: 20px;
       text-transform: uppercase;
       color: $accented;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
    }
-   &__right{
+   &__right {
       display: flex;
       justify-content: space-between;
       align-items: center;
    }
-	&__right-nav {
+   &__right-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
    }
-   &__right-item + .menu__right-item{
+   &__right-item + .menu__right-item {
       margin-left: 32px;
    }
-   &__btn{
+   &__btn {
       margin-left: 40px;
       margin-right: 45px;
       background-color: $accented;
@@ -83,7 +83,7 @@
       height: 42px;
       padding: 12px 27px 12px 23px;
       @extend %btn;
-      svg{
+      svg {
          width: 13px;
          height: 12px;
       }
@@ -95,29 +95,29 @@
    align-items: center;
    width: 50px;
    height: 50px;
-   &__svg{
+   &__svg {
       width: 49px;
       height: 48px;
    }
-   &__img{
-      path{
-         fill: $accented
+   &__img {
+      path {
+         fill: $accented;
       }
    }
 }
 
 //  =======   TOP   =======
 .top {
-   &__wrapper{
+   &__wrapper {
       margin-top: 132px;
       padding: 95px 60px 24px;
       background-color: $default;
    }
    &__logo {
       margin-bottom: 169px;
-      animation-delay: .2s;
+      animation-delay: 0.2s;
    }
-   &__logo-small{
+   &__logo-small {
       display: none;
    }
    &__info {
@@ -134,16 +134,16 @@
       width: 323px;
       height: 56px;
       margin-bottom: 5px;
-      animation-delay: .5s;
+      animation-delay: 0.5s;
    }
    &__subtitle {
       font-size: 16px;
       line-height: 20px;
       width: 300px;
       height: 40px;
-      animation-delay: .8s;
+      animation-delay: 0.8s;
    }
-   &__img-box{
+   &__img-box {
       padding-bottom: 175px;
       animation-delay: 1s;
    }
@@ -161,9 +161,10 @@
 
 //   =======   TOP-SLIDER   =======
 .top-slider {
-   &__inner{
+   &__inner {
       width: 100%;
       margin: 0 auto;
+      margin-bottom: 50px;
    }
    &__item {
       position: relative;
@@ -200,15 +201,15 @@
       @extend %faktum-wide-400;
       color: $accented;
       border-bottom: 1px solid #999;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
    }
    &__btn {
       width: 176px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       @extend %btn;
       @extend %faktum-500;
       font-size: 14px;
@@ -222,7 +223,6 @@
       position: absolute;
       top: 19px;
       right: 27px;
-
    }
    &__img {
       position: absolute;
@@ -230,12 +230,14 @@
       top: 142px;
       z-index: 5;
    }
-   .slick-dots{
+   .slick-dots {
+      position: relative;
+      top: 20px;
       display: flex;
       justify-content: center;
       gap: 20px;
-      li{
-         button{
+      li {
+         button {
             background-color: $accent-gray;
             border: none;
             cursor: pointer;
@@ -244,9 +246,9 @@
             height: 30px;
             font-size: 0;
          }
-         &.slick-active{
-            button{
-               background-color: #D8D7CA;
+         &.slick-active {
+            button {
+               background-color: #d8d7ca;
                border: 1px solid $accent-gray;
             }
          }
@@ -262,7 +264,7 @@
       align-items: start;
       padding: 160px 100px;
       flex-wrap: wrap;
-      gap:377px 466px;
+      gap: 377px 466px;
    }
    &__item {
       position: relative;
@@ -273,10 +275,10 @@
       animation-delay: 1s;
       animation-duration: 1s;
    }
-   &__item-img{
+   &__item-img {
       width: 327px;
       height: 138px;
-      animation-delay: .5s;
+      animation-delay: 0.5s;
       animation-duration: 1s;
    }
    &__title {
@@ -294,25 +296,24 @@
       object-fit: contain;
       top: 0;
       right: -115px;
-
    }
 }
 
 //   =======   BENEFITS   =======
 
 .benefits-top {
-   background-color: #787C63;
+   background-color: #787c63;
    text-align: center;
    padding-top: 96px;
-	&__title {
+   &__title {
       @extend %faktum-wide-700;
       font-size: 48px;
       line-height: 40px;
       text-transform: uppercase;
       color: $default;
       margin-bottom: 24px;
-	}
-	&__text {
+   }
+   &__text {
       @extend %faktum-wide-400;
       font-size: 16px;
       line-height: 24px;
@@ -320,12 +321,12 @@
       max-width: 497px;
       margin: 0 auto;
       margin-bottom: 32px;
-      animation-delay: .2s;
-	}
-	&__btn {
+      animation-delay: 0.2s;
+   }
+   &__btn {
       width: 199px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       @extend %btn;
       @extend %faktum-500;
       color: $default;
@@ -335,47 +336,47 @@
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
-      animation-delay: .5s;
-	}
-   &__svg{
+      animation-delay: 0.5s;
+   }
+   &__svg {
       width: 13px;
       height: 12px;
    }
 }
 .benefits-bottom {
-   background-color: #787C63;
+   background-color: #787c63;
    padding-bottom: 78px;
    padding-top: 84px;
    text-align: center;
    margin-bottom: 160px;
-	&__inner {
+   &__inner {
       display: flex;
       justify-content: space-between;
       max-width: 800px;
       margin: 0 auto;
-      animation-delay: .2s;
-	}
-	&__item {
+      animation-delay: 0.2s;
+   }
+   &__item {
       max-width: 132px;
-	}
-	&__svg {
+   }
+   &__svg {
       height: 70px;
       margin-bottom: 33px;
-      &--1{
+      &--1 {
          width: 49px;
       }
-      &--2{
+      &--2 {
          width: 59px;
       }
-      &--3{
+      &--3 {
          width: 62px;
       }
-	}
-	&__subtitle {
+   }
+   &__subtitle {
       font-size: 18px;
       line-height: 22px;
       color: $default;
-	}
+   }
 }
 
 //   ======= ONE-SCOOP   =======
@@ -495,7 +496,7 @@
       line-height: 24px;
    }
 }
-.rateYo{
+.rateYo {
    margin: 0 auto;
 }
 
@@ -535,7 +536,7 @@
       align-items: center;
       width: 199px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
    }
    &__svg {
       width: 13px;
@@ -548,15 +549,11 @@
    }
 }
 
-
-
 //     ==========     OTHER PAGES     ==========
-
-
 
 //   =======   WHY MUJO   =======
 .top-whymujo {
-   &__title-top{
+   &__title-top {
       margin-left: 90px;
       min-width: 1390px;
    }
@@ -588,25 +585,25 @@
       margin: 0 auto;
       object-fit: contain;
    }
-	&__inner-bottom {
+   &__inner-bottom {
       display: flex;
       justify-content: center;
       column-gap: 128px;
       margin-bottom: 120px;
-	}
-	&__title-bottom {
+   }
+   &__title-bottom {
       @extend %faktum-wide-800;
       font-size: 32px;
       line-height: 28px;
       text-transform: uppercase;
       max-width: 429px;
    }
-	&__text-bottom {
+   &__text-bottom {
       @extend %faktum-wide-400;
       font-size: 16px;
       line-height: 24px;
       max-width: 429px;
-	}
+   }
 }
 
 //   =======   STRESS   =======
@@ -659,32 +656,32 @@
       font-size: 14px;
       line-height: 20px;
    }
-	&__info {
+   &__info {
       display: flex;
       justify-content: center;
       column-gap: 130px;
       margin-bottom: 120px;
-	}
-	&__info-title {
+   }
+   &__info-title {
       @extend %faktum-wide-800;
       max-width: 428px;
       font-size: 32px;
       line-height: 28px;
       text-transform: uppercase;
-	}
-	&__info-text {
+   }
+   &__info-text {
       @extend %faktum-wide-400;
       font-size: 16px;
       line-height: 24px;
       max-width: 428px;
-	}
+   }
 }
 
 //   =======   ADAPTOGENS   =======
 .adaptogens {
    animation-duration: 1s;
    &__wrapper {
-      background-color: #787C63;
+      background-color: #787c63;
       color: $default;
       text-align: center;
       padding: 120px 236px;
@@ -831,7 +828,7 @@
       align-items: center;
       width: 199px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       animation-delay: 2s;
       animation-duration: 1.5s;
    }
@@ -844,19 +841,19 @@
       height: 540px;
       object-fit: cover;
    }
-   &__fadein_left{
-      animation-delay: .5s;
+   &__fadein_left {
+      animation-delay: 0.5s;
       animation-duration: 1s;
    }
-   &__fadein_right{
-      animation-delay: .5s;
+   &__fadein_right {
+      animation-delay: 0.5s;
       animation-duration: 1s;
    }
 }
 
 //   =======   COFFEE-MADE   =======
 
-.existing-coffee{
+.existing-coffee {
    &__inner {
       display: flex;
       justify-content: start;
@@ -869,12 +866,12 @@
       object-fit: cover;
       width: 652px;
       height: 540px;
-      animation-delay: .1s;
+      animation-delay: 0.1s;
       animation-duration: 1s;
    }
    &__info {
       max-width: 400px;
-      animation-delay: .1s;
+      animation-delay: 0.1s;
       animation-duration: 1s;
    }
    &__info-title {
@@ -957,7 +954,7 @@
       @extend %btn;
       width: 194px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
    }
    &__svg {
       width: 13px;
@@ -986,11 +983,11 @@
       text-transform: uppercase;
       margin-bottom: 16px;
    }
-   &__title-link{
+   &__title-link {
       color: $accented;
-      transition: all .2s;
-      &:hover{
-         color: $hover
+      transition: all 0.2s;
+      &:hover {
+         color: $hover;
       }
    }
    &__link {
@@ -1000,8 +997,8 @@
       line-height: 18px;
       padding-bottom: 2px;
       border-bottom: 1px solid $accented;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
    }
@@ -1009,7 +1006,7 @@
 
 //   =======   JOURNAL-ONE   =======
 .journal-one-top {
-   &__wrapper{
+   &__wrapper {
       padding: 64px 171px 0;
       margin-bottom: 120px;
    }
@@ -1055,7 +1052,7 @@
    }
 }
 .journal-one-bottom {
-   &__wrapper-bottom{
+   &__wrapper-bottom {
       padding: 0 263px;
       margin-bottom: 120px;
    }
@@ -1113,12 +1110,12 @@
    &__item {
       width: 429px;
    }
-   &__item:hover{
-      .shop__btn{
+   &__item:hover {
+      .shop__btn {
          transform: translateY(-100px);
       }
-      .shop__img-box{
-         background-color: #D7D7C8;
+      .shop__img-box {
+         background-color: #d7d7c8;
       }
    }
    &__img-box {
@@ -1126,9 +1123,9 @@
       height: 429px;
       position: relative;
       overflow: hidden;
-      transition: all .2s;
+      transition: all 0.2s;
       margin-bottom: 24px;
-      background: #F9F8ED;
+      background: #f9f8ed;
    }
    &__img {
       width: 366px;
@@ -1146,14 +1143,14 @@
       background-color: $accented;
       border: none;
       cursor: pointer;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          background-color: $hover;
       }
       margin: 0 auto;
       display: block;
       transform: translateY(100px);
-      transition: all .2s;
+      transition: all 0.2s;
    }
    &__item-title {
       @extend %faktum-wide-800;
@@ -1162,10 +1159,10 @@
       text-transform: uppercase;
       margin-bottom: 8px;
    }
-   &__item-title-link{
+   &__item-title-link {
       color: $accented;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
    }
@@ -1235,22 +1232,20 @@
       overflow: hidden;
       clip: rect(0 0 0 0);
       position: absolute;
-      &:checked{
-         & + .product-top__select-wrapper
-         {
-            border: 2px solid #787C63;
-         } 
+      &:checked {
+         & + .product-top__select-wrapper {
+            border: 2px solid #787c63;
+         }
       }
    }
    &__select-wrapper {
       width: 430px;
-      transition: all .2s;
+      transition: all 0.2s;
       height: 76px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       border-radius: 4px;
       margin-bottom: 12px;
       cursor: pointer;
-
    }
    &__select-top {
       display: flex;
@@ -1269,7 +1264,6 @@
       font-size: 12px;
       line-height: 16px;
       color: #999993;
-
    }
    &__shiping {
       @extend %faktum-wide-500;
@@ -1278,7 +1272,7 @@
       text-align: center;
       margin-bottom: 40px;
    }
-   &__shiping-svg{
+   &__shiping-svg {
       width: 9px;
       height: 7px;
       margin-right: 8px;
@@ -1295,14 +1289,14 @@
       margin: 0 auto;
       margin-bottom: 16px;
       cursor: pointer;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          background-color: $hover;
       }
    }
    &__info {
       width: 316px;
-      margin: 0 auto!important;
+      margin: 0 auto !important;
    }
    &__info-item {
       display: flex;
@@ -1331,19 +1325,19 @@
       text-align: center;
       top: 50%;
       position: relative;
-      background-color: #F9F8EE;
+      background-color: #f9f8ee;
    }
-   &__big-img{
-      margin:0 auto;
+   &__big-img {
+      margin: 0 auto;
    }
    &__thumb {
       max-width: 653px;
-      .slick-track{
+      .slick-track {
          display: flex;
          justify-content: start;
       }
-      .slick-list{
-         padding: 0!important;
+      .slick-list {
+         padding: 0 !important;
       }
    }
    &__thumb-img {
@@ -1351,13 +1345,13 @@
       height: 164px;
       object-fit: cover;
    }
-   &__img-wrapper{
+   &__img-wrapper {
       max-width: 207px;
       height: 164px;
       margin-right: 16px;
-      background-color: #F9F8EE;      
+      background-color: #f9f8ee;
    }
-   &__img-wrapper--last{
+   &__img-wrapper--last {
       margin-right: 0;
    }
 }
@@ -1365,7 +1359,7 @@
 .product-benefits {
    animation-duration: 1s;
    &__wrapper {
-      background-color: #787C63;
+      background-color: #787c63;
       color: $default;
       text-align: center;
       padding: 120px 60px;
@@ -1441,7 +1435,7 @@
       display: flex;
       flex-direction: column;
    }
-   &__img-box{
+   &__img-box {
       flex-grow: 1;
    }
    &__img {
@@ -1460,11 +1454,11 @@
       line-height: 16px;
       color: #999993;
    }
-   &__btn{
+   &__btn {
       @extend %btn;
       width: 311px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
@@ -1473,7 +1467,7 @@
       @extend %faktum-wide-500;
       margin-bottom: 80px;
    }
-   &__svg{
+   &__svg {
       width: 13px;
       height: 12px;
    }
@@ -1488,7 +1482,7 @@
       column-gap: 127px;
       margin-bottom: 120px;
    }
-   &__info {     
+   &__info {
       width: 430px;
    }
    &__title {
@@ -1508,7 +1502,7 @@
       display: flex;
       justify-content: space-between;
       column-gap: 64px;
-      background-color: #F9F8ED;
+      background-color: #f9f8ed;
       padding: 72px 72px 72px 80px;
    }
    &__content-item {
@@ -1545,7 +1539,7 @@
 .faq {
    &__inner {
       margin-bottom: 120px;
-      background-color: #787C63;
+      background-color: #787c63;
       padding: 120px 170px;
       display: flex;
       justify-content: space-between;
@@ -1578,7 +1572,7 @@
    &__btn {
       width: 196px;
       height: 56px;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       @extend %btn;
       font-size: 14px;
       line-height: 18px;
@@ -1598,7 +1592,7 @@
    width: 650px;
    &__box {
       padding-bottom: 32px;
-      border-bottom: 1px solid #C6C6BD;
+      border-bottom: 1px solid #c6c6bd;
       margin-bottom: 32px;
    }
    &__title {
@@ -1611,15 +1605,15 @@
       text-transform: uppercase;
       cursor: pointer;
    }
-   &__title--active{
-      .faq-content__svg--plus{
+   &__title--active {
+      .faq-content__svg--plus {
          display: none;
       }
-      .faq-content__svg--minus{
+      .faq-content__svg--minus {
          display: block;
       }
    }
-   &__title-span{
+   &__title-span {
       display: block;
       cursor: pointer;
    }
@@ -1629,8 +1623,8 @@
       line-height: 20px;
       display: none;
    }
-   &__text--active{
-      display: block;    
+   &__text--active {
+      display: block;
    }
    &__svg--minus {
       width: 16px;
@@ -1647,7 +1641,7 @@
 
 //   =======   ideas   =======
 .ideas {
-   &__title{
+   &__title {
       @extend %faktum-wide-800;
       font-size: 48px;
       line-height: 40px;
@@ -1695,7 +1689,7 @@
    }
 }
 
-//   =======   CONTACT   
+//   =======   CONTACT
 .contact {
    &__inner {
       display: flex;
@@ -1736,9 +1730,9 @@
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 32px;
-      transition: all .2s;
+      transition: all 0.2s;
       color: #333;
-      &:hover{
+      &:hover {
          color: $hover;
       }
    }
@@ -1751,13 +1745,13 @@
       width: 438px;
       height: 56px;
       padding: 19px 12px 19px 24px;
-      background-color: #F9F8ED;
-      border: 1px solid #C6C6BD;
+      background-color: #f9f8ed;
+      border: 1px solid #c6c6bd;
       margin-bottom: 16px;
-      &:focus-visible{
+      &:focus-visible {
          outline: 2px solid #787c63;
       }
-      &[placeholder]{
+      &[placeholder] {
          @extend %faktum-wide-500;
          font-size: 14px;
          line-height: 18px;
@@ -1767,7 +1761,6 @@
    &__textarea {
       height: 160px;
       resize: none;
-
    }
    &__btn {
       @extend %btn;
@@ -1786,22 +1779,22 @@
 }
 
 //   =======   FOOTER   =======
-.footer{
-   .container{
-      background-color: #F9F8ED;
+.footer {
+   .container {
+      background-color: #f9f8ed;
    }
 }
 .footer-top {
-	&__inner {
+   &__inner {
       display: flex;
       justify-content: space-between;
       gap: 70px;
       padding: 80px 60px 64px;
-	}
-	&__item {
+   }
+   &__item {
       min-width: 170px;
-	}
-	&__item-title {
+   }
+   &__item-title {
       @extend %faktum-wide-800;
       font-size: 20px;
       line-height: 20px;
@@ -1809,58 +1802,58 @@
       color: $accented;
       margin-bottom: 30px;
       pointer-events: none;
-	}
-   &__link-wrapper{
+   }
+   &__link-wrapper {
       display: flex;
       justify-content: start;
       align-items: center;
       gap: 12px;
    }
-   &__instagram-svg{
+   &__instagram-svg {
       width: 24px;
       height: 24px;
    }
-	&__link {
+   &__link {
       @extend %faktum-wide-500;
       font-size: 14px;
       line-height: 18px;
       color: $accented;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
-	}
-	&__link-instagramm {
+   }
+   &__link-instagramm {
       @extend %faktum-500;
       font-size: 14px;
       line-height: 32px;
       color: $accented;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
-	}
-	&__nav-item {
+   }
+   &__nav-item {
       margin-bottom: 15px;
    }
-	&__form-top {
+   &__form-top {
       margin-bottom: 11px;
       position: relative;
-	}
-	&__input-mail {
+   }
+   &__input-mail {
       width: 317px;
       height: 46px;
       background-color: transparent;
-      border: 1px solid #C6C6BD;
+      border: 1px solid #c6c6bd;
       outline: none;
       padding: 14px 20px;
-	}
-   &__input-mail[placeholder]{
+   }
+   &__input-mail[placeholder] {
       font-size: 14px;
       line-height: 18px;
       color: $accent-gray;
    }
-	&__btn {
+   &__btn {
       width: 13px;
       height: 13px;
       @extend %btn;
@@ -1868,12 +1861,12 @@
       top: 14px;
       left: 287px;
       padding: 0;
-	}
-   &__btn-svg{
+   }
+   &__btn-svg {
       width: 13px;
       height: 13px;
    }
-   &__label{
+   &__label {
       display: flex;
       justify-content: start;
       align-items: start;
@@ -1883,69 +1876,68 @@
       font-size: 12px;
       line-height: 16px;
    }
-	&__input-checkbox {
+   &__input-checkbox {
       margin: 0;
       margin-right: 12px;
-	}
-
+   }
 }
 .footer-logo {
    padding: 64px 60px 56px;
-	&__svg {
+   &__svg {
       width: 1320px;
       height: 272px;
-	}
-   &__svg-small{
+   }
+   &__svg-small {
       display: none;
    }
 }
 .footer-bottom {
-	&__inner-top {
+   &__inner-top {
       display: flex;
       justify-content: space-between;
       padding: 55px 60px 40px;
-	}
-	&__text-info {
+   }
+   &__text-info {
       font-size: 16px;
       line-height: 20px;
-	}
-	&__title {
+   }
+   &__title {
       font-size: 20px;
       line-height: 20px;
       @extend %faktum-wide-700;
       text-transform: uppercase;
-	}
-	&__link-block {
+   }
+   &__link-block {
       display: flex;
       justify-content: space-between;
       gap: 38px;
-	}
-	&__link {
+   }
+   &__link {
       font-size: 16px;
       line-height: 32px;
       color: $accented;
-      transition: all .2s;
-      &:hover{
+      transition: all 0.2s;
+      &:hover {
          color: $hover;
       }
-	}
-	&__inner-bottom {
+   }
+   &__inner-bottom {
       text-align: center;
-	}
-	&__text-top {
+   }
+   &__text-top {
       border: 1px solid $accent-gray;
       display: inline-block;
       margin-bottom: 17px;
       font-size: 12px;
       line-height: 16px;
       padding: 8px;
-	}
-	&__text-bottom {
+   }
+   &__text-bottom {
       font-size: 12px;
       line-height: 16px;
       @extend %faktum-wide-700;
       padding: 0 60px 40px;
       color: $accent-gray;
-	}
+   }
 }
 @import 'media';
