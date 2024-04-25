@@ -1,0 +1,42 @@
+$default: #FFFEF3;
+$accented: #333;
+$hover: #B19B8F;
+$accent-gray: #999993;
+
+
+
+%Inter-400 {
+   font-family: 'Inter-Regular', sans-serif;
+   font-weight: 400;
+}
+%faktum-500 {
+   font-family: 'faktum-medium', sans-serif;
+   font-weight: 500;
+}
+%faktum-wide-400 {
+   font-family: 'faktum-wide-regular', sans-serif;
+   font-weight: 400;
+}
+%faktum-wide-500 {
+   font-family: 'faktum-wide-medium', sans-serif;
+   font-weight: 500;
+}
+%faktum-wide-700 {
+   font-family: 'faktum-wide-bold', sans-serif;
+   font-weight: 700;
+}
+%faktum-wide-800 {
+   font-family: 'faktum-wide-extrabold', sans-serif;
+   font-weight: 800;
+}
+
+%btn {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   padding: 19px 27px 19px 23px;
+   transition: all .2s;
+   &:hover {
+      background-color: $hover;
+   }
+}

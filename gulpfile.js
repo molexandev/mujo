@@ -10,7 +10,7 @@ const newer          = require('gulp-newer');
 const fonter         = require('gulp-fonter');
 const ttf2woff2      = require('gulp-ttf2woff2');
 const svgSprite      = require('gulp-svg-sprite');
-const include      = require('gulp-include');
+const include        = require('gulp-include');
 // const { notify }     = require('browser-sync');
 const del            = require('del');
 const browserSync    = require('browser-sync').create();
@@ -59,6 +59,11 @@ function styles() {
 function scripts() {
    return src([
       'node_modules/jquery/dist/jquery.js',
+      'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/rateyo/src/jquery.rateyo.js',
+      'app/js/whymujo.js',
+      'app/js/about.js',
+      'app/js/product.js',
       'app/js/main.js'
    ])
    .pipe(concat('main.min.js'))

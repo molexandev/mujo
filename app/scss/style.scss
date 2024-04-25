@@ -1,23 +1,1951 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
+.header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+}
+.header-top{
+   @extend %faktum-wide-700;
+   font-size: 12px;
+   line-height: 16px;
+   color: $default;
+   background-color: $accented;
+   max-width: 1470px;
+   height: 44px;
+   margin: 0 -15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 5px;
+}
+.menu {
+   padding: 16px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 80px;
+   border-bottom: 1px solid #C6C6BD;
+   &__left-btn{
+      display: none;
+   }
+   &__left-info {
+      padding-left: 45px!important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+	&__left-item + .menu__left-item{
+      margin-left: 45px;
+   }
+	&__link {
+      @extend %faktum-wide-700;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__right{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+	&__right-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__right-item + .menu__right-item{
+      margin-left: 32px;
+   }
+   &__btn{
+      margin-left: 40px;
+      margin-right: 45px;
+      background-color: $accented;
+      color: $default;
+      @extend %faktum-500;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 162px;
+      height: 42px;
+      padding: 12px 27px 12px 23px;
+      @extend %btn;
+      svg{
+         width: 13px;
+         height: 12px;
+      }
+   }
+}
+.logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   &__svg{
+      width: 49px;
+      height: 48px;
+   }
+   &__img{
+      path{
+         fill: $accented
+      }
+   }
+}
+
+//  =======   TOP   =======
+.top {
+   &__wrapper{
+      margin-top: 132px;
+      padding: 95px 60px 24px;
+      background-color: $default;
+   }
+   &__logo {
+      margin-bottom: 169px;
+      animation-delay: .2s;
+   }
+   &__logo-small{
+      display: none;
+   }
+   &__info {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      gap: 222px;
+      @extend %faktum-wide-800;
+      text-transform: uppercase;
+   }
+   &__title {
+      font-size: 32px;
+      line-height: 28px;
+      width: 323px;
+      height: 56px;
+      margin-bottom: 5px;
+      animation-delay: .5s;
+   }
+   &__subtitle {
+      font-size: 16px;
+      line-height: 20px;
+      width: 300px;
+      height: 40px;
+      animation-delay: .8s;
+   }
+   &__img-box{
+      padding-bottom: 175px;
+      animation-delay: 1s;
+   }
+   &__img {
+      margin: 0 auto;
+      object-fit: contain;
+      width: 1402px;
+      height: 720px;
+   }
+   &__logo-big {
+      width: 798px;
+      height: 172px;
+   }
+}
+
+//   =======   TOP-SLIDER   =======
+.top-slider {
+   &__inner{
+      width: 100%;
+      margin: 0 auto;
+   }
+   &__item {
+      position: relative;
+      min-height: 818px;
+   }
+   &__content {
+      padding-left: 170px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 120px;
+      line-height: 100px;
+      text-transform: uppercase;
+      max-width: 753px;
+      margin-bottom: 56px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 500px;
+      margin-bottom: 59px;
+   }
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: center;
+      max-width: 362px;
+   }
+   &__link {
+      font-size: 14px;
+      line-height: 18px;
+      @extend %faktum-wide-400;
+      color: $accented;
+      border-bottom: 1px solid #999;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__btn {
+      width: 176px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      @extend %btn;
+      @extend %faktum-500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: left;
+      position: relative;
+   }
+   &__btn-svg {
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      top: 19px;
+      right: 27px;
+
+   }
+   &__img {
+      position: absolute;
+      left: 581px;
+      top: 142px;
+      z-index: 5;
+   }
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      li{
+         button{
+            background-color: $accent-gray;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 0;
+         }
+         &.slick-active{
+            button{
+               background-color: #D8D7CA;
+               border: 1px solid $accent-gray;
+            }
+         }
+      }
+   }
+}
+
+//   =======   TOP-INFO   =======
+.top-info {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      padding: 160px 100px;
+      flex-wrap: wrap;
+      gap:377px 466px;
+   }
+   &__item {
+      position: relative;
+      max-width: 327px;
+      text-align: right;
+      font-size: 16px;
+      line-height: 20px;
+      animation-delay: 1s;
+      animation-duration: 1s;
+   }
+   &__item-img{
+      width: 327px;
+      height: 138px;
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+   }
+   &__img {
+      min-width: 924px;
+      height: 689px;
+      position: absolute;
+      object-fit: contain;
+      top: 0;
+      right: -115px;
+
+   }
+}
+
+//   =======   BENEFITS   =======
+
+.benefits-top {
+   background-color: #787C63;
+   text-align: center;
+   padding-top: 96px;
+	&__title {
+      @extend %faktum-wide-700;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: $default;
+      margin-bottom: 24px;
+	}
+	&__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $default;
+      max-width: 497px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      animation-delay: .2s;
+	}
+	&__btn {
+      width: 199px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      @extend %btn;
+      @extend %faktum-500;
+      color: $default;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      animation-delay: .5s;
+	}
+   &__svg{
+      width: 13px;
+      height: 12px;
+   }
+}
+.benefits-bottom {
+   background-color: #787C63;
+   padding-bottom: 78px;
+   padding-top: 84px;
+   text-align: center;
+   margin-bottom: 160px;
+	&__inner {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 0 auto;
+      animation-delay: .2s;
+	}
+	&__item {
+      max-width: 132px;
+	}
+	&__svg {
+      height: 70px;
+      margin-bottom: 33px;
+      &--1{
+         width: 49px;
+      }
+      &--2{
+         width: 59px;
+      }
+      &--3{
+         width: 62px;
+      }
+	}
+	&__subtitle {
+      font-size: 18px;
+      line-height: 22px;
+      color: $default;
+	}
+}
+
+//   ======= ONE-SCOOP   =======
+.one-scoop {
+   &__title-box {
+      @extend %faktum-wide-800;
+      text-transform: uppercase;
+      overflow: hidden;
+   }
+   &__title-top {
+      font-size: 140px;
+      line-height: 125px;
+      margin-left: 171px;
+      margin-bottom: 18px;
+   }
+   &__title-bottom {
+      font-size: 140px;
+      line-height: 125px;
+      text-align: right;
+      color: $default;
+      -webkit-text-stroke: 1px $accented;
+      margin-bottom: 160px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 127px;
+      margin-bottom: 160px;
+   }
+   &__img {
+      object-fit: cover;
+      width: 652px;
+      height: 540px;
+   }
+   &__info {
+      max-width: 400px;
+   }
+   &__info-title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 387px;
+      margin-bottom: 40px;
+   }
+   &__btn {
+      @extend %btn;
+      background-color: $accented;
+      color: $default;
+      width: 176px;
+      height: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__svg {
+      width: 13px;
+      height: 13px;
+   }
+}
+
+//   =======   HAPPY-CUSTOMERS   =======
+
+.happy-customers {
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 94px;
+   }
+   &__inner {
+      margin-bottom: 160px;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0 95px;
+   }
+   &__item {
+      max-width: 333px;
+      text-align: center;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+   &__rating {
+      margin-bottom: 24px;
+   }
+   &__rewiev {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+      flex-grow: 1;
+   }
+   &__person {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 24px;
+   }
+   &__img {
+      width: 48px;
+      height: 48px;
+   }
+   &__name {
+      @extend %faktum-wide-500;
+      font-size: 16px;
+      line-height: 24px;
+   }
+}
+.rateYo{
+   margin: 0 auto;
+}
+
+//   =======   ONE-CHOICE   =======
+.own-choice {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 169px;
+      margin-bottom: 160px;
+      padding-left: 171px;
+      overflow: hidden;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 388px;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      max-width: 388px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 40px;
+   }
+   &__btn {
+      @extend %faktum-wide-500;
+      @extend %btn;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 199px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+   }
+   &__img {
+      width: 712px;
+      height: 540px;
+      object-fit: cover;
+   }
+}
 
 
 
+//     ==========     OTHER PAGES     ==========
 
 
 
+//   =======   WHY MUJO   =======
+.top-whymujo {
+   &__title-top{
+      margin-left: 90px;
+      min-width: 1390px;
+   }
+   &__inner {
+      padding-top: 64px;
+   }
+   &__inner-top {
+      max-width: 1040px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 60px;
+      margin-bottom: 64px;
+   }
+   &__logo {
+      width: 155px;
+      height: 32px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 372px;
+   }
+   &__img-box {
+      margin-bottom: 120px;
+   }
+   &__img {
+      margin: 0 auto;
+      object-fit: contain;
+   }
+	&__inner-bottom {
+      display: flex;
+      justify-content: center;
+      column-gap: 128px;
+      margin-bottom: 120px;
+	}
+	&__title-bottom {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 429px;
+   }
+	&__text-bottom {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 429px;
+	}
+}
 
+//   =======   STRESS   =======
+.stress {
+   &__inner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 120px;
+      column-gap: 238px;
+   }
+   &__img-box {
+      margin-left: 72px;
+   }
+   &__img {
+      width: 541px;
+      height: 540px;
+   }
+   &__title {
+      text-align-last: left;
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 64px;
+      max-width: 429px;
+   }
+   &__preferences {
+      max-width: 429px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: start;
+      column-gap: 40px;
+      row-gap: 32px;
+   }
+   &__preferences-item {
+      width: 110px;
+   }
+   &__svg {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+   }
+	&__info {
+      display: flex;
+      justify-content: center;
+      column-gap: 130px;
+      margin-bottom: 120px;
+	}
+	&__info-title {
+      @extend %faktum-wide-800;
+      max-width: 428px;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+	}
+	&__info-text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 428px;
+	}
+}
 
+//   =======   ADAPTOGENS   =======
+.adaptogens {
+   animation-duration: 1s;
+   &__wrapper {
+      background-color: #787C63;
+      color: $default;
+      text-align: center;
+      padding: 120px 236px;
+      margin-bottom: 120px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin: 0 auto;
+      margin-bottom: 80px;
+      max-width: 850px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 8px;
+   }
+   &__item {
+      width: 317px;
+   }
+   &__svg {
+      display: block;
+      margin: 0 auto;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-700;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__text {
+      margin: 0 auto;
+      @extend %faktum-wide-400;
+      max-width: 260px;
+      font-size: 15px;
+      line-height: 20px;
+   }
+}
 
+//   =======   ABOUT   =======
 
+//   =======   TOP-ABOUT   =======
+.top-about {
+   &__inner {
+      padding-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 64px;
+   }
+   &__logo {
+      margin-left: 60px;
+   }
+   &__box-text {
+      margin-right: 308px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      max-width: 405px;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__text {
+      @extend %faktum-wide-500;
+      max-width: 370px;
+      font-size: 18px;
+      line-height: 22px;
+   }
+   &__img-box {
+      margin-bottom: 120px;
+   }
+   &__img {
+      margin: 0 auto;
+   }
+}
 
+//   =======   ABOUT-INFO   =======
+.about-info {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 128px;
+      margin-bottom: 120px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      max-width: 429px;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 387px;
+   }
+}
 
+//   =======   COFFEE-MADE   =======
+.coffee-made {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 169px;
+      margin-bottom: 160px;
+      padding-left: 171px;
+      overflow: hidden;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 388px;
+      margin-bottom: 24px;
+      animation-delay: 1s;
+      animation-duration: 1.5s;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      max-width: 388px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 40px;
+      animation-delay: 1.5s;
+      animation-duration: 1.5s;
+   }
+   &__btn {
+      @extend %faktum-wide-500;
+      @extend %btn;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 199px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      animation-delay: 2s;
+      animation-duration: 1.5s;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+   }
+   &__img {
+      width: 712px;
+      height: 540px;
+      object-fit: cover;
+   }
+   &__fadein_left{
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
+   &__fadein_right{
+      animation-delay: .5s;
+      animation-duration: 1s;
+   }
+}
 
+//   =======   COFFEE-MADE   =======
 
+.existing-coffee{
+   &__inner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 127px;
+      margin-bottom: 160px;
+      overflow: hidden;
+   }
+   &__img {
+      object-fit: cover;
+      width: 652px;
+      height: 540px;
+      animation-delay: .1s;
+      animation-duration: 1s;
+   }
+   &__info {
+      max-width: 400px;
+      animation-delay: .1s;
+      animation-duration: 1s;
+   }
+   &__info-title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      animation-delay: 1s;
+      animation-duration: 1s;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 387px;
+      margin-bottom: 40px;
+      animation-delay: 1.3s;
+      animation-duration: 1s;
+   }
+   &__btn {
+      @extend %btn;
+      background-color: $default;
+      color: $accented;
+      border: 1px solid $accented;
+      width: 176px;
+      height: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation-delay: 1.7s;
+      animation-duration: 1s;
+   }
+   &__svg {
+      width: 13px;
+      height: 13px;
+   }
+}
 
+//   =======   JOURNAL   =======
 
+.journal {
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 120px;
+      line-height: 100px;
+      text-transform: uppercase;
+      margin-left: 170px;
+      padding-top: 160px;
+      margin-bottom: 92px;
+   }
+   &__inner {
+      padding: 0 170px 80px;
+   }
+}
+.journal-top {
+   margin-bottom: 80px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 49px;
+   &__img {
+      width: 541px;
+      height: 550px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 24px;
+   }
+   &__btn {
+      @extend %btn;
+      width: 194px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+   }
+}
+.journal-bottom {
+   display: flex;
+   justify-content: space-between;
+   column-gap: 16px;
+   row-gap: 24px;
+   flex-wrap: wrap;
+   &__item {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 24px;
+      width: 541px;
+      height: 211px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      max-width: 196px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__title-link{
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover
+      }
+   }
+   &__link {
+      @extend %faktum-wide-400;
+      color: $accented;
+      font-size: 14px;
+      line-height: 18px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+}
 
+//   =======   JOURNAL-ONE   =======
+.journal-one-top {
+   &__wrapper{
+      padding: 64px 171px 0;
+      margin-bottom: 120px;
+   }
+   &__category {
+      @extend %faktum-500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 32px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      max-width: 800px;
+      margin-bottom: 48px;
+   }
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+   }
+   &__info-item {
+      display: flex;
+      column-gap: 8px;
+   }
+   &__info-title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__info-text {
+      @extend %Inter-400;
+      font-size: 14px;
+      line-height: 16px;
+   }
+   &__img {
+      width: 1098px;
+      height: 488px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+   }
+}
+.journal-one-bottom {
+   &__wrapper-bottom{
+      padding: 0 263px;
+      margin-bottom: 120px;
+   }
+   &__heade-text {
+      @extend %faktum-wide-400;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 64px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 64px;
+   }
+   &__img {
+      width: 861.52px;
+      height: 488px;
+      margin: 0 auto;
+      margin-bottom: 64px;
+   }
+   &__item {
+      display: list-item;
+      list-style: disc;
+      margin-left: 25px;
+   }
+}
+
+//   =======   SHOP   =======
+.shop {
+   &__wrapper {
+      padding: 80px 60px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 64px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 15px;
+      row-gap: 78.95px;
+      flex-wrap: wrap;
+   }
+   &__item {
+      width: 429px;
+   }
+   &__item:hover{
+      .shop__btn{
+         transform: translateY(-100px);
+      }
+      .shop__img-box{
+         background-color: #D7D7C8;
+      }
+   }
+   &__img-box {
+      width: 429px;
+      height: 429px;
+      position: relative;
+      overflow: hidden;
+      transition: all .2s;
+      margin-bottom: 24px;
+      background: #F9F8ED;
+   }
+   &__img {
+      width: 366px;
+      height: 362px;
+      margin: 0 auto;
+      margin-bottom: 34px;
+      margin-top: 34px;
+   }
+   &__btn {
+      width: 400px;
+      height: 56px;
+      padding: 18px 20px;
+      text-align: center;
+      color: $default;
+      background-color: $accented;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+         background-color: $hover;
+      }
+      margin: 0 auto;
+      display: block;
+      transform: translateY(100px);
+      transition: all .2s;
+   }
+   &__item-title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+   }
+   &__item-title-link{
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__description {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 16px;
+   }
+   &__price-box {
+      @extend %faktum-wide-500;
+      display: flex;
+      justify-content: space-between;
+      width: 236px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #999;
+   }
+}
+
+//   =======   PRODUCT   =======
+//   =======   product top   =======
+.product-top {
+   &__wrapper {
+      padding: 64px 171px 120px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 126px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 32px;
+   }
+   &__description {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      margin-bottom: 40px;
+   }
+   &__form {
+      margin-bottom: 16px;
+   }
+   &__form-title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+
+   &__input {
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      position: absolute;
+      &:checked{
+         & + .product-top__select-wrapper
+         {
+            border: 2px solid #787C63;
+         } 
+      }
+   }
+   &__select-wrapper {
+      width: 430px;
+      transition: all .2s;
+      height: 76px;
+      border: 1px solid #C6C6BD;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      cursor: pointer;
+
+   }
+   &__select-top {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 12px 4px;
+      @extend %faktum-wide-700;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+   }
+   &__select-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 12px 16px;
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999993;
+
+   }
+   &__shiping {
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      margin-bottom: 40px;
+   }
+   &__shiping-svg{
+      width: 9px;
+      height: 7px;
+      margin-right: 8px;
+   }
+   &__btn {
+      background-color: $accented;
+      color: $default;
+      width: 316px;
+      height: 56px;
+      @extend %faktum-wide-700;
+      font-size: 14px;
+      line-height: 20px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+         background-color: $hover;
+      }
+   }
+   &__info {
+      width: 316px;
+      margin: 0 auto!important;
+   }
+   &__info-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 8px 7px 0;
+   }
+   &__info-link {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #999993;
+   }
+   &__svg {
+      width: 14px;
+      height: 8px;
+   }
+}
+.slider-product {
+   width: 100%;
+   &__big {
+      width: 653px;
+      height: 562px;
+      margin-bottom: 16px;
+   }
+   &__big-item {
+      text-align: center;
+      top: 50%;
+      position: relative;
+      background-color: #F9F8EE;
+   }
+   &__big-img{
+      margin:0 auto;
+   }
+   &__thumb {
+      max-width: 653px;
+      .slick-track{
+         display: flex;
+         justify-content: start;
+      }
+      .slick-list{
+         padding: 0!important;
+      }
+   }
+   &__thumb-img {
+      width: 207px;
+      height: 164px;
+      object-fit: cover;
+   }
+   &__img-wrapper{
+      max-width: 207px;
+      height: 164px;
+      margin-right: 16px;
+      background-color: #F9F8EE;      
+   }
+   &__img-wrapper--last{
+      margin-right: 0;
+   }
+}
+//   =======   product-top END   =======
+.product-benefits {
+   animation-duration: 1s;
+   &__wrapper {
+      background-color: #787C63;
+      color: $default;
+      text-align: center;
+      padding: 120px 60px;
+      margin-bottom: 120px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin: 0 auto;
+      margin-bottom: 80px;
+      max-width: 850px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 8px;
+   }
+   &__item {
+      width: 317px;
+   }
+   &__svg {
+      display: block;
+      margin: 0 auto;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-700;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__text {
+      margin: 0 auto;
+      @extend %faktum-wide-400;
+      max-width: 260px;
+      font-size: 15px;
+      line-height: 20px;
+   }
+}
+//   =======   PREMIUM   =======
+.premium {
+   &__title-box {
+      @extend %faktum-wide-800;
+      font-size: 85px;
+      line-height: 125px;
+      text-transform: uppercase;
+   }
+   &__title-bottom {
+      color: $default;
+      -webkit-text-stroke: 1px $accented;
+      margin-bottom: 120px;
+   }
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 58px;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      row-gap: 24px;
+      margin-bottom: 120px;
+   }
+   &__item {
+      width: 207px;
+      height: 187px;
+      text-align: center;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+   &__img-box{
+      flex-grow: 1;
+   }
+   &__img {
+      margin: 0 auto;
+      margin-bottom: 11px;
+   }
+   &__item-title {
+      @extend %faktum-wide-800;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+   }
+   &__text {
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999993;
+   }
+   &__btn{
+      @extend %btn;
+      width: 311px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 18px;
+      @extend %faktum-wide-500;
+      margin-bottom: 80px;
+   }
+   &__svg{
+      width: 13px;
+      height: 12px;
+   }
+}
+
+//   =======   SOURCED   =======
+.sourced {
+   &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 127px;
+      margin-bottom: 120px;
+   }
+   &__info {     
+      width: 430px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 366px;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+   }
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 64px;
+      background-color: #F9F8ED;
+      padding: 72px 72px 72px 80px;
+   }
+   &__content-item {
+      width: 248px;
+   }
+   &__content-img {
+      width: 248px;
+      height: 248px;
+      margin-bottom: 40px;
+   }
+   &__content-deskr {
+      @extend %faktum-wide-500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 4px;
+   }
+   &__content-subtitle {
+      @extend %faktum-wide-800;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__content-info-item {
+      @extend %faktum-wide-500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #333;
+      margin-bottom: 4px;
+   }
+}
+
+//   =======   FAQ   =======
+.faq {
+   &__inner {
+      margin-bottom: 120px;
+      background-color: #787C63;
+      padding: 120px 170px;
+      display: flex;
+      justify-content: space-between;
+      color: $default;
+   }
+   &__info {
+      margin-right: 128px;
+      width: 429px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 32px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__descr {
+      @extend %faktum-wide-500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 32px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+      width: 319px;
+      margin-bottom: 40px;
+   }
+   &__btn {
+      width: 196px;
+      height: 56px;
+      border: 1px solid #C6C6BD;
+      @extend %btn;
+      font-size: 14px;
+      line-height: 18px;
+      @extend %faktum-wide-500;
+      color: $default;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__svg {
+      margin-top: 3px;
+      width: 13px;
+      height: 12px;
+   }
+}
+.faq-content {
+   width: 650px;
+   &__box {
+      padding-bottom: 32px;
+      border-bottom: 1px solid #C6C6BD;
+      margin-bottom: 32px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      cursor: pointer;
+   }
+   &__title--active{
+      .faq-content__svg--plus{
+         display: none;
+      }
+      .faq-content__svg--minus{
+         display: block;
+      }
+   }
+   &__title-span{
+      display: block;
+      cursor: pointer;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+      display: none;
+   }
+   &__text--active{
+      display: block;    
+   }
+   &__svg--minus {
+      width: 16px;
+      height: 16px;
+      padding-top: 6px;
+      display: none;
+   }
+   &__svg--plus {
+      width: 16px;
+      height: 16px;
+      display: block;
+   }
+}
+
+//   =======   ideas   =======
+.ideas {
+   &__title{
+      @extend %faktum-wide-800;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      width: 392px;
+      margin-left: 60px;
+      margin-bottom: 64px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 60px;
+      margin-bottom: 120px;
+   }
+   &__item {
+      width: 429px;
+   }
+   &__img {
+      width: 429px;
+      height: 400px;
+      margin-bottom: 24px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+   }
+   &__list {
+      max-width: 289px;
+   }
+   &__list-item {
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: start;
+      @extend %faktum-wide-400;
+      font-size: 14px;
+      line-height: 20px;
+   }
+   &__quantity {
+      color: #333;
+      width: 88px;
+      opacity: 0.5;
+   }
+}
+
+//   =======   CONTACT   
+.contact {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 120px 171px 0 178px;
+      margin-bottom: 120px;
+   }
+   &__info {
+      width: 549px;
+      margin-right: 114px;
+   }
+   &__title {
+      @extend %faktum-wide-800;
+      width: 430px;
+      font-size: 48px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+   }
+   &__text {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      width: 392px;
+   }
+   &__content-top {
+      margin-bottom: 32px;
+   }
+   &__subtitle {
+      @extend %faktum-wide-800;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+   }
+   &__link {
+      @extend %faktum-wide-400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+      transition: all .2s;
+      color: #333;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__form {
+      width: 438px;
+      margin-bottom: 40px;
+   }
+   &__input,
+   &__textarea {
+      width: 438px;
+      height: 56px;
+      padding: 19px 12px 19px 24px;
+      background-color: #F9F8ED;
+      border: 1px solid #C6C6BD;
+      margin-bottom: 16px;
+      &:focus-visible{
+         outline: 2px solid #787c63;
+      }
+      &[placeholder]{
+         @extend %faktum-wide-500;
+         font-size: 14px;
+         line-height: 18px;
+         color: $accent-gray;
+      }
+   }
+   &__textarea {
+      height: 160px;
+      resize: none;
+
+   }
+   &__btn {
+      @extend %btn;
+      width: 220px;
+      height: 56px;
+      background-color: $accented;
+      color: $default;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__svg {
+      width: 13px;
+      height: 12px;
+      margin-top: 3px;
+   }
+}
+
+//   =======   FOOTER   =======
+.footer{
+   .container{
+      background-color: #F9F8ED;
+   }
+}
+.footer-top {
+	&__inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 70px;
+      padding: 80px 60px 64px;
+	}
+	&__item {
+      min-width: 170px;
+	}
+	&__item-title {
+      @extend %faktum-wide-800;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $accented;
+      margin-bottom: 30px;
+      pointer-events: none;
+	}
+   &__link-wrapper{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 12px;
+   }
+   &__instagram-svg{
+      width: 24px;
+      height: 24px;
+   }
+	&__link {
+      @extend %faktum-wide-500;
+      font-size: 14px;
+      line-height: 18px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+	}
+	&__link-instagramm {
+      @extend %faktum-500;
+      font-size: 14px;
+      line-height: 32px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+	}
+	&__nav-item {
+      margin-bottom: 15px;
+   }
+	&__form-top {
+      margin-bottom: 11px;
+      position: relative;
+	}
+	&__input-mail {
+      width: 317px;
+      height: 46px;
+      background-color: transparent;
+      border: 1px solid #C6C6BD;
+      outline: none;
+      padding: 14px 20px;
+	}
+   &__input-mail[placeholder]{
+      font-size: 14px;
+      line-height: 18px;
+      color: $accent-gray;
+   }
+	&__btn {
+      width: 13px;
+      height: 13px;
+      @extend %btn;
+      position: absolute;
+      top: 14px;
+      left: 287px;
+      padding: 0;
+	}
+   &__btn-svg{
+      width: 13px;
+      height: 13px;
+   }
+   &__label{
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      max-width: 317px;
+      @extend %faktum-wide-700;
+      color: #969690;
+      font-size: 12px;
+      line-height: 16px;
+   }
+	&__input-checkbox {
+      margin: 0;
+      margin-right: 12px;
+	}
+
+}
+.footer-logo {
+   padding: 64px 60px 56px;
+	&__svg {
+      width: 1320px;
+      height: 272px;
+	}
+   &__svg-small{
+      display: none;
+   }
+}
+.footer-bottom {
+	&__inner-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 55px 60px 40px;
+	}
+	&__text-info {
+      font-size: 16px;
+      line-height: 20px;
+	}
+	&__title {
+      font-size: 20px;
+      line-height: 20px;
+      @extend %faktum-wide-700;
+      text-transform: uppercase;
+	}
+	&__link-block {
+      display: flex;
+      justify-content: space-between;
+      gap: 38px;
+	}
+	&__link {
+      font-size: 16px;
+      line-height: 32px;
+      color: $accented;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+	}
+	&__inner-bottom {
+      text-align: center;
+	}
+	&__text-top {
+      border: 1px solid $accent-gray;
+      display: inline-block;
+      margin-bottom: 17px;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 8px;
+	}
+	&__text-bottom {
+      font-size: 12px;
+      line-height: 16px;
+      @extend %faktum-wide-700;
+      padding: 0 60px 40px;
+      color: $accent-gray;
+	}
+}
 @import 'media';

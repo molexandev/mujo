@@ -1,4 +1,37 @@
+html,
 body {
-   min-height: 100vh;
+   height: 100%;
+}
+body {
+   height: 100vh;
+   @extend %faktum-wide-500;
+   color: $accented;
+   background-color: $default;
+}
+.lock {
+   overflow: hidden;
+}
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.main {
+   flex-grow: 1;
+   min-height: 135px;
+   padding-top: 132px;
+}
+a {
+   text-decoration: none;
+}
+.container {
+   width: 1470px;
+   margin: 0 auto;
+   padding: 0 15px;
+   background-color: $default;
+}
+img {
+   width: 100%;
+   height: auto;
 }
 /* =============================*/
