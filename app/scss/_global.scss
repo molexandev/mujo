@@ -8,10 +8,10 @@ body {
    color: $accented;
    background-color: $default;
 }
-.lock{
+.lock {
    overflow: hidden;
 }
-.wrapper{   
+.wrapper {
    min-height: 100%;
    display: flex;
    flex-direction: column;
@@ -21,13 +21,17 @@ body {
    min-height: 135px;
    padding-top: 132px;
 }
-a{
+a {
    text-decoration: none;
 }
-.container{
+.container {
    width: 1470px;
    margin: 0 auto;
    padding: 0 15px;
    background-color: $default;
+}
+img {
+   width: 100%;
+   height: auto;
 }
 /* =============================*/
